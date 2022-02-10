@@ -46,7 +46,7 @@
  >     * How work will be divided between the team members
 
 ## Class Diagram
- > Include a **class diagram(s)** for your project and a **description** of the diagram(s). Your class diagram(s) should include all the main classes you plan for the project. This should be in sufficient detail that another group could pick up the project this point and successfully complete it. Use proper UML notation (as discussed in the course slides).
+TaskBuddy is our client program, users can only interacts with this class directly and nothing else. Our users should create a UserAccount to be able to use our program. Menu class has all menus for basic input and output. TaskList is a composite class contained in UserAccount, UserAccount could create as many TaskList as needed. Task is a composite class contained in TaskList, while SubTask is a child class of Task. Lastly we have Data & Time which are composited contained in Task and SubTask.
 
 <img src="UML.png?raw=true" width="1000">
  

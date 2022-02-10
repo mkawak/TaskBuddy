@@ -46,7 +46,7 @@
  >     * How work will be divided between the team members
 
 ## Class Diagram
-<img src="images/<Screen Shot 2022-02-09 at 18.33.10 PM>?raw=true" width="1000">
+<img src="<Screen Shot 2022-02-09 at 18.33.10 PM>?raw=true" width="1000">
  > Include a **class diagram(s)** for your project and a **description** of the diagram(s). Your class diagram(s) should include all the main classes you plan for the project. This should be in sufficient detail that another group could pick up the project this point and successfully complete it. Use proper UML notation (as discussed in the course slides).
  
  > ## Phase III

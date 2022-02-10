@@ -1,53 +1,26 @@
- k  As you complete each section you **must** remove the prompt text. Every *turnin* of this project includes points for formatting of this README so keep it clean and keep it up to date. 
- > Prompt text is any lines beginning with "\>"
- > Replace anything between \<...\> with your project specifics and remove angle brackets. For example, you need to name your project and replace the header right below this line with that title (no angle brackets). 
 # Task Buddy
- > Your author list below should include links to all members GitHub (remove existing author).
  
  > Authors: [Allison Chu](https://github.com/allisonchuu) [Juan Salas](https://github.com/lightsofpeace) [Majd Kawak](https://github.com/mkawa025) [Christopher Wong](https://github.com/c24wong)
- 
- > You will be forming a group of **FOUR** students and working on an interesting project. The project has 4 phases, each one with specific requirements. A list of proposed project ideas that have been successful in previous quarters is listed in the project specifications document on Canvas. You can select an idea from the list, start thinking about the features you will implement, what design patterns can help you implement them, and why. If you want to propose your own original idea, you will have to contact an instructor to discuss the project and obtain written permission before you submit your project proposal (Phase 1). Your project needs to implement at least one design pattern iteratively, which you will have to justify in later phases.The project work should be divided almost equally among team members. You can of course help each other, but it needs to be clear who will be responsible for which features. Additionally, you are expected to follow Scrum patterns, specifically the use of a Scrum (Project) board, Sprints, and Scrum meetings. While Daily Scrums are not required we highly encourage you to practice them.
-
- 
- > ## Expectations
- > * Incorporate **at least one** design pattern
- >   * It is recommended that you include a design pattern that we will teach this session (Composite, Strategy, or Visitor)
- > * Your project should be implemented in C++. If you wish to choose anoher programming language (e.g. Java, Python), please discuss with your lab TA to obtain permission.
- > * You can incorporate additional technologies/tools but they must be approved (in writing) by the instructor or the TA.
- > * Each member of the group **must** be committing code regularly and make sure their code is correctly attributed to them. We will be checking attributions to determine if there was equal contribution to the project.
- > * Each member of the group must actively participate in the Github Project board and reviewing commited code.
-> * All project phases are to be submitted to this GitHub repository. You should modify this README file to reflect the different phases of the project. In addition, you should regularly hold sprint meetings with your group. You will need to hold two scrum/check-in meetings with your lab TA/reader in two different weeks in addition to the final demo.
-
 
 ## Project Description
+
  > * Why is it important or interesting to you?
- >   * The final project as a whole is significant due to the experience of working in a group format on a larger scale project, the ability to meet deadlines, as well as learning and implementing better Software Development Life Cycles.
- >   * Specifically to the construction of the Task Manager, as students or developers, organization is essential. The ability to layout deadlines, important dates for tests, and just budgeting time in general are all points that can be solved through said program. Having different categories of tasks, helps separate by types or by importance, allowing for more specified organization. 
+ * The final project as a whole is significant due to the experience of working in a group format on a larger scale project, the ability to meet deadlines, as well as learning and implementing better Software Development Life Cycles.
+ * Specifically to the construction of the Task Manager, as students or developers, organization is essential. The ability to layout deadlines, important dates for tests, and just budgeting time in general are all points that can be solved through said program. Having different categories of tasks, helps separate by types or by importance, allowing for more specified organization. 
 
  > * What languages/tools/technologies do you plan to use? (This list may change over the course of the project)
- >   * [C++](https://www.cplusplus.com) - We plan to use C++ as the primary language because it allows us to take better control of our data.
- >   * [Hammer and Git](https://git-scm.com/) - We will use Hammer to program and help us maneuver in the Git environment and facilitate branching and merging.
- >   * [Github](https://github.com/cs100/final-project-mkawa025-allisonchuu-c24wong-lightof) - We will also use Github as a main hub to house our work, Github allows us to have adequate communication with each other about what needs to be done through the Kanban Boards.
- >   * [Discord](https://discord.com) - Lastly we will use Discord as a meeting place to hold scrum meetings and to be able to communicate with more clarity and more frequently.
- > * What will be the input/output of your project? What are the features that the project provides?
- >   * First we need to get a username (maybe a password protected). Our basic inputs would be adding tasks to lists created by our user as well as creating lists. Every task would have the option to have sub tasks, modifying tasks as well as lists. Finally saving our objects to text files(read and write). For output, user would have the option to list all task lists or tasks only due today for example.
- >   * Task Buddy features the ability to create tasks based on need. Each task includes a title, description, due date. Tasks also have the option to include classification, priority, and duration. Task Buddy allows for the creation of task lists as well as nested tasks. Users can display, edit, and delete tasks/task lists. As well as undo them.
- > 
+ * [C++](https://www.cplusplus.com) - We plan to use C++ as the primary language because it allows us to take better control of our data.
+ * [Hammer and Git](https://git-scm.com/) - We will use Hammer to program and help us maneuver in the Git environment and facilitate branching and merging.
+ * [Github](https://github.com/cs100/final-project-mkawa025-allisonchuu-c24wong-lightof) - We will also use Github as a main hub to house our work, Github allows us to have adequate communication with each other about what needs to be done through the Kanban Boards.
+ * [Discord](https://discord.com) - Lastly we will use Discord as a meeting place to hold scrum meetings and to be able to communicate with more clarity and more frequently.
+ * What will be the input/output of your project? What are the features that the project provides?
+ * First we need to get a username (maybe a password protected). Our basic inputs would be adding tasks to lists created by our user as well as creating lists. Every task would have the option to have sub tasks, modifying tasks as well as lists. Finally saving our objects to text files(read and write). For output, user would have the option to list all task lists or tasks only due today for example.
+ * Task Buddy features the ability to create tasks based on need. Each task includes a title, description, due date. Tasks also have the option to include classification, priority, and duration. Task Buddy allows for the creation of task lists as well as nested tasks. Users can display, edit, and delete tasks/task lists. As well as undo them.
+  
  > ## Phase II
- > In addition to completing the "Class Diagram" section below, you will need to:
- > * Create an "Epic" (note) for each feature and each design pattern and assign them to the appropriate team member. Place these in the `Backlog` column
- > * Complete your first *sprint planning* meeting to plan out the next 7 days of work.
- >   * Create smaller actionable development tasks as issues and assign them to team members. Place these in the `TODO` column.
- >   * These cards should represent roughly 7 days worth of development time for your team, taking you until your first meeting with the TA
- > * Schedule two check-ins using Calendly. You need to pick both time slots during your lab on week 8. Your entire team must be present for both check-ins.
- >   * The first check-in needs to be scheduled with your lab TA. During that meeting, you will discuss your project design/class diagram from phase II.
- >   * The second check-in should be scheduled with a reader. During that meeting you will discuss:
- >     * The tasks you are planning for the first sprint
- >     * How work will be divided between the team members
-
 ## Class Diagram
 
->TaskBuddy is our client program, users can only interacts with this class directly and nothing else. Our users should create a UserAccount to be able to use our program. Menu class has all menus for basic input and output. TaskList is a composite class contained in UserAccount, UserAccount could create as many TaskList as needed. Task is a composite class contained in TaskList, while SubTask is a child class of Task. Lastly we have Data & Time which are composited contained in Task and SubTask.
+TaskBuddy is our client program, users can only interacts with this class directly and nothing else. Our users should create a UserAccount to be able to use our program. Menu class has all menus for basic input and output. TaskList is a composite class contained in UserAccount, UserAccount could create as many TaskList as needed. Task is a composite class contained in TaskList, while SubTask is a child class of Task. Lastly we have Data & Time which are composited contained in Task and SubTask.
 <img src="UML.png?raw=true" width="1000">
  
  > ## Phase III

@@ -48,7 +48,6 @@
 ## Class Diagram
 
 TaskBuddy is our client program, users can only interacts with this class directly and nothing else. Our users should create a UserAccount to be able to use our program. Menu class has all menus for basic input and output. TaskList is a composite class contained in UserAccount, UserAccount could create as many TaskList as needed. Task is a composite class contained in TaskList, while SubTask is a child class of Task. Lastly we have Data & Time which are composited contained in Task and SubTask.
-
 <img src="UML.png?raw=true" width="1000">
  
  > ## Phase III

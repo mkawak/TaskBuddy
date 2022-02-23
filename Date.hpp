@@ -9,6 +9,17 @@
 using namespace std;
 
 class Date{
+	public:
+	int getMonth();
+	int getDay();
+	int getYear();
+	std::string getDate();
+	
+	protected:
+
+	private:
+	
 };
+
 
 #endif

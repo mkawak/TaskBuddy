@@ -13,12 +13,13 @@ class Date{
 	int getMonth();
 	int getDay();
 	int getYear();
-	std::string getDate();
 	
 	protected:
 
 	private:
-	
+	int month;
+	int day;
+	int year;
 };
 
 

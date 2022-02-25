@@ -5,6 +5,9 @@
 
 using namespace std;
 
+Date(int month, int day, int year){
+}
+
 int getMonth(){
 }
 
@@ -14,7 +17,5 @@ int getDay(){
 int getYear(){
 }
 
-std:string getDate(){
-}
 
 

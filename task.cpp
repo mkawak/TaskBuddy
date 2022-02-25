@@ -68,7 +68,7 @@ Time Task::getAlarmTime() const
     return this->alarmTime;
 }
 
-ostream& operator<<(ostream& output, const Course& obj)
+ostream& operator<<(ostream& output, const Task& obj)
 {
     output << "Task Name:     " << obj.taskName << endl;
     output << "Note:      " << obj.taskNote << endl;
@@ -78,9 +78,28 @@ ostream& operator<<(ostream& output, const Course& obj)
     return output;
 }
 
-istream &operator>>(istream &input, Course &obj)
+istream &operator>>(istream &input, Task& obj)
 {
-    
+    string taskNameInput, taskNoteInput;
+
+    cout << "\nPLease enter Task name: ";
+    getline(input, taskNameInput);
+
+    cout << "PLease enter Task note: ";
+    getline(input, taskNoteInput);
+
+
+    Date alarmDateInput;
+    cout << "PLease enter Task alarm date in the form 01/01/1990: ";
+    input >> alarmDateInput;
+
+    Time alarmTimeInput;
+    cout << "PLease enter Task alarm time in the form 09:41 AM: ";
+    input >> alarmTimeInput;
+
+    obj.setTaskName(taskNameInput).setTaskNote(taskNoteInput);
+    obj.setAlarmDate(alarmDateInput);
+    obj.setAlarmTime(alarmTimeInput);    
 
     return input;
 }

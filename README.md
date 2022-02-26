@@ -25,7 +25,7 @@ TaskBuddy is our client program, users can only interacts with this class direct
  
  > ## Phase III
  ## Project Design Pattern(s)
- > The design pattern we are using to implement TaskBuddy is the Composite Design Pattern. We picked this pattern because we are allowing our Tasks to have Sub-Tasks. So in the case of our project our Tasks are our composite and our Sub-Tasks are our leaf(s). We believed this would be a good feature to implement in order to provide a way for users to both create task lists made of tasks and allow those tasks to have sub-tasks. The pattern allowed us to clearly see the relationships between the different components of our project.
+ > The design pattern we are using to implement TaskBuddy is the Itterator Design Pattern. We picked this pattern because we are allowing our Tasks to have Sub-Tasks and so need to be able to itterate through them as we display them all. We believed this would be a good feature to implement in order to provide a way for users to both create task lists made of tasks and allow those tasks to have sub-tasks. The pattern allowed us to clearly see the relationships between the different components of our project.
 
  
  > ## Final deliverable

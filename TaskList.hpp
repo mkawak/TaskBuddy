@@ -10,13 +10,17 @@ using namespace std;
 
 class TaskList{
 	public:
-	std::string getListName();
-	std::string getCategory();
+	Tasklist();
+	Tasklist(std::string nam, std::string cat);
+	void setListName(std::string n);
+	void setCategory(std::string c);
+	void setListName();
+	void setCategory();
 	int counter();
 	void countUp();
 	void addTask();
 	void coundDown();
-	void deleteTask();
+	void deleteTask(Task t);
 	void displayList();
 	protected:
 

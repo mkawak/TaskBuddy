@@ -4,6 +4,8 @@
 // Class: CS100
 
 #include "subtask.hpp"
+#include <ctime>
+#include <iostream>
 
 using namespace std;
 
@@ -38,6 +40,14 @@ istream &operator>>(istream &input, SubTask &obj)
     cout << "PLease enter SubTask note: ";
     getline(input, subTaskNoteInput);
 
+    time_t now = time(0);
+    tm *ltm = localtime(&now);
+
+    Date creationDateInput(1 + ltm->tm_mon, ltm->tm_mday, 1900 + ltm->tm_year);
+    obj.setCreationDate(creationDateInput);
+
+    Time creatingTimeInput(5+ltm->tm_hour, 30+ltm->tm_min);
+    obj.setCreationTime(creationTimeinput);
 
     Date alarmDateInput;
     cout << "PLease enter SubTask alarm date in the form 01/01/1990: ";

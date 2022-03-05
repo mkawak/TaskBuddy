@@ -34,6 +34,8 @@ public:
     Task& setTaskNote(string);
     void setAlarmDate(Date);
     void setAlarmTime(Time);
+    void setCreationDate(Date);
+    void setCreationTime(Time);
 
     string getTaskName() const;
     string getTaskNote() const;

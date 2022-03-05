@@ -1,8 +1,3 @@
-// Majd Kawak
-// Date 02/15/2022
-// Assignment: Final Project (Task Buddy)
-// Class: CS100
-
 #ifndef __TASK_HPP__
 #define __TASK_HPP__
 
@@ -34,6 +29,8 @@ public:
     Task& setTaskNote(string);
     void setAlarmDate(Date);
     void setAlarmTime(Time);
+    void setCreationDate(Date);
+    void setCreationTime(Time);
 
     string getTaskName() const;
     string getTaskNote() const;

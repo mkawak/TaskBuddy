@@ -25,7 +25,6 @@
     </property>
     <property name="font">
      <font>
-      <family>Calibre</family>
       <pointsize>18</pointsize>
      </font>
     </property>
@@ -51,7 +50,6 @@
        </property>
        <property name="font">
         <font>
-         <family>Calibre</family>
          <pointsize>18</pointsize>
         </font>
        </property>
@@ -122,6 +120,7 @@
       <widget class="QPushButton" name="CreateAccButton">
        <property name="font">
         <font>
+         <family>Calibre</family>
          <pointsize>18</pointsize>
         </font>
        </property>

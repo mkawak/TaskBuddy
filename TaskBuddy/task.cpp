@@ -4,6 +4,8 @@
 // Class: CS100
 
 #include "task.hpp"
+#include <ctime>
+#include <iostream>
 
 using namespace std;
 
@@ -26,6 +28,15 @@ Task& Task::setTaskNote(string taskNotePassed)
 {
     this->taskNote = taskNotePassed;
     return *this;
+}
+void Task::setCreationDate(Date creationDatePassed)
+{
+    this->creationDate = creationDatePassed;
+}
+
+void Task::setCreationTime(Time creationTimePassed)
+{
+    this->creationTime = creationTimePassed;
 }
 
 void Task::setAlarmDate(Date alarmDatePassed)
@@ -88,6 +99,14 @@ istream &operator>>(istream &input, Task& obj)
     cout << "PLease enter Task note: ";
     getline(input, taskNoteInput);
 
+    time_t now = time(0);
+    tm *ltm = localtime(&now);
+
+    Date creationDateInput(1 + ltm->tm_mon, ltm->tm_mday, 1900 + ltm->tm_year);
+    obj.setCreationDate(creationDateInput);
+
+    Time creatingTimeInput(5+ltm->tm_hour, 30+ltm->tm_min);
+    obj.setCreationTime(creationTimeinput);
 
     Date alarmDateInput;
     cout << "PLease enter Task alarm date in the form 01/01/1990: ";
@@ -99,7 +118,7 @@ istream &operator>>(istream &input, Task& obj)
 
     obj.setTaskName(taskNameInput).setTaskNote(taskNoteInput);
     obj.setAlarmDate(alarmDateInput);
-    obj.setAlarmTime(alarmTimeInput);    
+    obj.setAlarmTime(alarmTimeInput);
 
     return input;
 }

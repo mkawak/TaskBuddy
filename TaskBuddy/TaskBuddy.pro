@@ -9,14 +9,28 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    TaskList.cpp \
+    UserAccount.cpp \
     main.cpp \
-    taskbuddy.cpp
+    subtask.cpp \
+    task.cpp \
+    taskbuddy.cpp \
+    taskhub.cpp
 
 HEADERS += \
-    taskbuddy.h
+    ../TaskList.hpp \
+    ../subtask.hpp \
+    ../task.hpp \
+    TaskList.hpp \
+    UserAccount.hpp \
+    subtask.hpp \
+    task.hpp \
+    taskbuddy.h \
+    taskhub.h
 
 FORMS += \
-    taskbuddy.ui
+    taskbuddy.ui \
+    taskhub.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

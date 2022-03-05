@@ -1,6 +1,8 @@
 #ifndef TASKLIST_H
 #define TASKLIST_H
 
+#include "task.hpp"
+
 #include <string>
 #include <iostream>
 #include <vector>
@@ -10,15 +12,17 @@ using namespace std;
 
 class TaskList{
 	public:
-	Tasklist();
-	Tasklist(std::string nam, std::string cat);
+    TaskList();
+    TaskList(std::string nam, std::string cat);
 	void setListName(std::string n);
-	void setCategory(std::string c);
+    void setListCategory(std::string c);
 	void setListName();
-	void setCategory();
-	int counter();
+    string getListName();
+    void setListCategory();
+    string getListCategory();
+    int listCounter();
 	void countUp();
-	void addTask();
+    void addTask(Task t);
 	void coundDown();
 	void deleteTask(Task t);
 	void displayList();

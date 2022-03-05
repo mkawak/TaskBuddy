@@ -14,11 +14,11 @@ Time::~Time(){
 }
 
 int Time::getHour(int hour){
-	this->
+	return this->hour;
 }
 
 int TIme::getMinute(int minute){
-	this->
+	return this->minute;
 }
 
 void Time::setHour(int hourPassed){

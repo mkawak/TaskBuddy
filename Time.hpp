@@ -12,6 +12,9 @@ class Time{
 	public:
 	int getHour();
 	int getMinute();
+	
+	void setHour();
+	void setMinute();
 
 	protected:
 

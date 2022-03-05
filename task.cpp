@@ -1,7 +1,7 @@
 // Majd Kawak
-// // Date 02/15/2022
-// // Assignment: Final Project (Task Buddy)
-// // Class: CS100
+// Date 02/15/2022
+// Assignment: Final Project (Task Buddy)
+// Class: CS100
 
 #include "task.hpp"
 

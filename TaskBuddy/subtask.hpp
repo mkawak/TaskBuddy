@@ -6,18 +6,21 @@
 #ifndef __SUBTASK_HPP
 #define __SUBTASK_HPP
 
-#include "task.hpp"
+#include <string>
 
 using namespace std;
 
-class SubTask : public Task
+class SubTask
 {
-    friend ostream& operator<<(ostream&, const SubTask&);
-    friend istream& operator >> (istream&, SubTask&);
-
     public:
-        SubTask(string = "N/A", string = "N/A", Date = Date(), Time = Time());
-    
+        SubTask();
+        ~SubTask();
+
+        SubTask& setSubTaskName(string);
+        string getSubTaskName() const;
+
+    private:
+        string name;
 
 };
 

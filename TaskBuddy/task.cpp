@@ -6,12 +6,15 @@
 #include "task.hpp"
 #include <ctime>
 #include <iostream>
+#include <QDebug>
 
 using namespace std;
 
-Task::Task(string taskNamePassed, string taskNotePassed, Date alarmDatePassed, Time alarmTimePassed):
-taskName(taskNamePassed), taskNote(taskNotePassed), alarmDate(alarmDatePassed), alarmTime(alarmTimePassed)
+Task::Task()
 {
+    this->taskName = "";
+    this->taskNote = "";
+    this->taskDate = "";
 }
 
 Task ::~Task()
@@ -24,29 +27,15 @@ Task& Task::setTaskName(string taskNamePassed)
     return *this;
 }
 
-Task& Task::setTaskNote(string taskNotePassed)
+Task& Task::setTaskNote(string note)
 {
-    this->taskNote = taskNotePassed;
+    this->taskNote = note;
     return *this;
 }
-void Task::setCreationDate(Date creationDatePassed)
+Task&  Task::setTaskDate(string date)
 {
-    this->creationDate = creationDatePassed;
-}
-
-void Task::setCreationTime(Time creationTimePassed)
-{
-    this->creationTime = creationTimePassed;
-}
-
-void Task::setAlarmDate(Date alarmDatePassed)
-{
-    this->alarmDate = alarmDatePassed;
-}
-
-void Task::setAlarmTime(Time alarmTimePassed)
-{
-    this->alarmTime = alarmTimePassed;
+    this->taskDate = date;
+    return *this;
 }
 
 string Task::getTaskName() const
@@ -59,66 +48,23 @@ string Task::getTaskNote() const
     return this->taskNote;
 }
 
-Date Task::getCeationDate() const
+string Task::getTaskDate() const
 {
-    return this->creationDate;
+    return this->taskDate;
 }
 
-Date Task::getAlarmDate() const
+void Task::addSubTask(SubTask s)
 {
-    return this->alarmDate;
+    subTaskList.push_back(s);
 }
 
-Time Task::getCeationTime() const
+void Task::deleteSubTask(int index)
 {
-    return this->creationTime;
-}
-
-Time Task::getAlarmTime() const
-{
-    return this->alarmTime;
-}
-
-ostream& operator<<(ostream& output, const Task& obj)
-{
-    output << "Task Name:     " << obj.taskName << endl;
-    output << "Note:      " << obj.taskNote << endl;
-    output << "Task Creation Date and Time:    " << obj.creationDate << obj.creationTime << endl;
-    output << "Task Alarm Date and Time::    " << obj.alarmDate << obj.alarmTime << endl;
-
-    return output;
-}
-
-istream &operator>>(istream &input, Task& obj)
-{
-    string taskNameInput, taskNoteInput;
-
-    cout << "\nPLease enter Task name: ";
-    getline(input, taskNameInput);
-
-    cout << "PLease enter Task note: ";
-    getline(input, taskNoteInput);
-
-    time_t now = time(0);
-    tm *ltm = localtime(&now);
-
-    Date creationDateInput(1 + ltm->tm_mon, ltm->tm_mday, 1900 + ltm->tm_year);
-    obj.setCreationDate(creationDateInput);
-
-    Time creatingTimeInput(5+ltm->tm_hour, 30+ltm->tm_min);
-    obj.setCreationTime(creationTimeinput);
-
-    Date alarmDateInput;
-    cout << "PLease enter Task alarm date in the form 01/01/1990: ";
-    input >> alarmDateInput;
-
-    Time alarmTimeInput;
-    cout << "PLease enter Task alarm time in the form 09:41 AM: ";
-    input >> alarmTimeInput;
-
-    obj.setTaskName(taskNameInput).setTaskNote(taskNoteInput);
-    obj.setAlarmDate(alarmDateInput);
-    obj.setAlarmTime(alarmTimeInput);
-
-    return input;
+    qDebug() << "Delete SubTask func called";
+    for(unsigned int i = 0; i < this->subTaskList.size(); ++i){
+        if (i == index){
+            subTaskList.erase(subTaskList.begin()+(i));
+            qDebug() << "SubTask deleted";
+        }
+    }
 }

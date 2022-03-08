@@ -16,19 +16,16 @@ public:
         UserAccount(std::string nam);
         void setUserName(std::string n);
         std::string getUserName();
-
+        void addTaskList(TaskList t);
+        void deleteTaskList(int);
+        vector<TaskList> list;
         protected:
 
         private:
-        vector<TaskList> list;
+
         std::string userName;
-        int counter;
-        int accCounter();
-        void countUp();
-        void addTaskList(TaskList t);
-        void coundDown();
-        void deleteTaskList(TaskList t);
-        void displayTaskLists();
+
+
 };
 
 #endif

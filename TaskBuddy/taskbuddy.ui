@@ -6,9 +6,20 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>1649</width>
+    <height>881</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>12</pointsize>
+   </font>
   </property>
   <property name="windowTitle">
    <string>TaskBuddy</string>
@@ -19,12 +30,13 @@
      <rect>
       <x>230</x>
       <y>190</y>
-      <width>331</width>
-      <height>211</height>
+      <width>411</width>
+      <height>251</height>
      </rect>
     </property>
     <property name="font">
      <font>
+      <family>Calibre</family>
       <pointsize>18</pointsize>
      </font>
     </property>
@@ -50,6 +62,7 @@
        </property>
        <property name="font">
         <font>
+         <family>Calibre</family>
          <pointsize>18</pointsize>
         </font>
        </property>
@@ -68,8 +81,25 @@
      </item>
      <item>
       <layout class="QHBoxLayout" name="UserName">
+       <property name="leftMargin">
+        <number>10</number>
+       </property>
+       <property name="topMargin">
+        <number>40</number>
+       </property>
+       <property name="rightMargin">
+        <number>10</number>
+       </property>
+       <property name="bottomMargin">
+        <number>40</number>
+       </property>
        <item>
         <widget class="QLabel" name="UserNameTxt">
+         <property name="font">
+          <font>
+           <family>Calibre</family>
+          </font>
+         </property>
          <property name="styleSheet">
           <string notr="true">QLabel {
 	color: white;
@@ -82,6 +112,11 @@
        </item>
        <item>
         <widget class="QLineEdit" name="UserNameInput">
+         <property name="font">
+          <font>
+           <family>Calibre</family>
+          </font>
+         </property>
          <property name="styleSheet">
           <string notr="true">QLineEdit{
 	background-color: white;
@@ -96,9 +131,16 @@
      </item>
      <item>
       <widget class="QPushButton" name="LoginButton">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
        <property name="font">
         <font>
-         <pointsize>18</pointsize>
+         <family>Calibre</family>
+         <pointsize>14</pointsize>
         </font>
        </property>
        <property name="styleSheet">
@@ -106,8 +148,8 @@
 	background-color: white;
 	color: gray;
 	border-radius: 5px;
-	padding-top: 10px;
-	padding-bottom: 5px;
+	margin-left:10px;
+	margin-right:10px;
 }
 
 QPushButton:pressed{
@@ -122,9 +164,16 @@ QPushButton:pressed{
      </item>
      <item>
       <widget class="QPushButton" name="CreateAccButton">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
        <property name="font">
         <font>
-         <pointsize>18</pointsize>
+         <family>Calibre</family>
+         <pointsize>14</pointsize>
         </font>
        </property>
        <property name="styleSheet">
@@ -132,8 +181,8 @@ QPushButton:pressed{
 	background-color: white;
 	color: gray;
 	border-radius: 5px;
-	padding-top: 10px;
-	padding-bottom: 5px;
+	margin-left:10px;
+	margin-right:10px;
 }
 
 QPushButton:pressed{
@@ -151,11 +200,17 @@ QPushButton:pressed{
    <widget class="QGroupBox" name="taskHub">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>0</x>
       <y>0</y>
-      <width>781</width>
-      <height>561</height>
+      <width>881</width>
+      <height>651</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Calibre</family>
+      <pointsize>12</pointsize>
+     </font>
     </property>
     <property name="title">
      <string/>
@@ -164,10 +219,15 @@ QPushButton:pressed{
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>70</y>
-       <width>741</width>
-       <height>481</height>
+       <y>100</y>
+       <width>831</width>
+       <height>531</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Calibre</family>
+      </font>
      </property>
      <property name="styleSheet">
       <string notr="true">QGroupBox{
@@ -181,11 +241,16 @@ QPushButton:pressed{
      <widget class="QGroupBox" name="Menu">
       <property name="geometry">
        <rect>
-        <x>28</x>
-        <y>340</y>
-        <width>681</width>
-        <height>141</height>
+        <x>20</x>
+        <y>350</y>
+        <width>791</width>
+        <height>181</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Calibre</family>
+       </font>
       </property>
       <property name="title">
        <string/>
@@ -400,7 +465,8 @@ QPushButton:pressed{
          </property>
          <property name="font">
           <font>
-           <pointsize>18</pointsize>
+           <family>Calibre</family>
+           <pointsize>12</pointsize>
           </font>
          </property>
          <property name="styleSheet">
@@ -633,7 +699,8 @@ QPushButton:pressed{
          </property>
          <property name="font">
           <font>
-           <pointsize>18</pointsize>
+           <family>Calibre</family>
+           <pointsize>12</pointsize>
           </font>
          </property>
          <property name="styleSheet">
@@ -866,7 +933,8 @@ QPushButton:pressed{
          </property>
          <property name="font">
           <font>
-           <pointsize>18</pointsize>
+           <family>Calibre</family>
+           <pointsize>12</pointsize>
           </font>
          </property>
          <property name="styleSheet">
@@ -1099,7 +1167,8 @@ QPushButton:pressed{
          </property>
          <property name="font">
           <font>
-           <pointsize>18</pointsize>
+           <family>Calibre</family>
+           <pointsize>12</pointsize>
           </font>
          </property>
          <property name="styleSheet">
@@ -1332,7 +1401,8 @@ QPushButton:pressed{
          </property>
          <property name="font">
           <font>
-           <pointsize>18</pointsize>
+           <family>Calibre</family>
+           <pointsize>12</pointsize>
           </font>
          </property>
          <property name="styleSheet">
@@ -1565,7 +1635,8 @@ QPushButton:pressed{
          </property>
          <property name="font">
           <font>
-           <pointsize>18</pointsize>
+           <family>Calibre</family>
+           <pointsize>12</pointsize>
           </font>
          </property>
          <property name="styleSheet">
@@ -1798,7 +1869,8 @@ QPushButton:pressed{
          </property>
          <property name="font">
           <font>
-           <pointsize>18</pointsize>
+           <family>Calibre</family>
+           <pointsize>12</pointsize>
           </font>
          </property>
          <property name="styleSheet">
@@ -2031,7 +2103,8 @@ QPushButton:pressed{
          </property>
          <property name="font">
           <font>
-           <pointsize>18</pointsize>
+           <family>Calibre</family>
+           <pointsize>12</pointsize>
           </font>
          </property>
          <property name="styleSheet">
@@ -2060,16 +2133,16 @@ QPushButton:pressed{
      <widget class="QListWidget" name="TaskListsDisplay">
       <property name="geometry">
        <rect>
-        <x>37</x>
+        <x>30</x>
         <y>50</y>
-        <width>217</width>
-        <height>281</height>
+        <width>251</width>
+        <height>291</height>
        </rect>
       </property>
       <property name="font">
        <font>
         <family>Calibre</family>
-        <pointsize>14</pointsize>
+        <pointsize>12</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -2088,11 +2161,16 @@ QListWidget::item{
      <widget class="QGroupBox" name="AddTL">
       <property name="geometry">
        <rect>
-        <x>37</x>
+        <x>30</x>
         <y>50</y>
-        <width>217</width>
-        <height>281</height>
+        <width>251</width>
+        <height>291</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Calibre</family>
+       </font>
       </property>
       <property name="styleSheet">
        <string notr="true">QGroupBox{
@@ -2113,6 +2191,7 @@ QListWidget::item{
          </property>
          <property name="font">
           <font>
+           <family>Calibre</family>
            <bold>true</bold>
           </font>
          </property>
@@ -2131,8 +2210,19 @@ QListWidget::item{
        </item>
        <item>
         <layout class="QHBoxLayout" name="addTaskListName">
+         <property name="topMargin">
+          <number>59</number>
+         </property>
+         <property name="bottomMargin">
+          <number>10</number>
+         </property>
          <item>
           <widget class="QLabel" name="taskListNameTxt">
+           <property name="font">
+            <font>
+             <family>Calibre</family>
+            </font>
+           </property>
            <property name="styleSheet">
             <string notr="true">QLabel{
 	color:gray;
@@ -2145,6 +2235,11 @@ QListWidget::item{
          </item>
          <item>
           <widget class="QLineEdit" name="taskListNameInput">
+           <property name="font">
+            <font>
+             <family>Calibre</family>
+            </font>
+           </property>
            <property name="styleSheet">
             <string notr="true">QLineEdit{
 	background-color: white;
@@ -2156,8 +2251,19 @@ QListWidget::item{
        </item>
        <item>
         <layout class="QHBoxLayout" name="addTaskListCat">
+         <property name="topMargin">
+          <number>10</number>
+         </property>
+         <property name="bottomMargin">
+          <number>59</number>
+         </property>
          <item>
           <widget class="QLabel" name="catTxt">
+           <property name="font">
+            <font>
+             <family>Calibre</family>
+            </font>
+           </property>
            <property name="styleSheet">
             <string notr="true">QLabel{
 	color:gray;
@@ -2170,6 +2276,11 @@ QListWidget::item{
          </item>
          <item>
           <widget class="QLineEdit" name="taskListCatInput">
+           <property name="font">
+            <font>
+             <family>Calibre</family>
+            </font>
+           </property>
            <property name="styleSheet">
             <string notr="true">QLineEdit{
 	background-color: white;
@@ -2182,7 +2293,7 @@ QListWidget::item{
        <item>
         <widget class="QPushButton" name="addTLBtn">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -2415,7 +2526,8 @@ QListWidget::item{
          </property>
          <property name="font">
           <font>
-           <pointsize>18</pointsize>
+           <family>Calibre</family>
+           <pointsize>12</pointsize>
           </font>
          </property>
          <property name="styleSheet">
@@ -2444,16 +2556,16 @@ QPushButton:pressed{
      <widget class="QListWidget" name="TasksDisplay">
       <property name="geometry">
        <rect>
-        <x>260</x>
+        <x>290</x>
         <y>50</y>
-        <width>217</width>
-        <height>281</height>
+        <width>251</width>
+        <height>291</height>
        </rect>
       </property>
       <property name="font">
        <font>
         <family>Calibre</family>
-        <pointsize>14</pointsize>
+        <pointsize>12</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -2467,11 +2579,16 @@ QPushButton:pressed{
      <widget class="QGroupBox" name="AddT">
       <property name="geometry">
        <rect>
-        <x>260</x>
+        <x>290</x>
         <y>50</y>
-        <width>217</width>
-        <height>281</height>
+        <width>251</width>
+        <height>291</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Calibre</family>
+       </font>
       </property>
       <property name="styleSheet">
        <string notr="true">QGroupBox{
@@ -2492,6 +2609,7 @@ QPushButton:pressed{
          </property>
          <property name="font">
           <font>
+           <family>Calibre</family>
            <bold>true</bold>
           </font>
          </property>
@@ -2510,8 +2628,19 @@ QPushButton:pressed{
        </item>
        <item>
         <layout class="QHBoxLayout" name="addTaskName">
+         <property name="topMargin">
+          <number>20</number>
+         </property>
+         <property name="bottomMargin">
+          <number>20</number>
+         </property>
          <item>
           <widget class="QLabel" name="taskTxt">
+           <property name="font">
+            <font>
+             <family>Calibre</family>
+            </font>
+           </property>
            <property name="styleSheet">
             <string notr="true">QLabel{
 	color:gray;
@@ -2524,6 +2653,11 @@ QPushButton:pressed{
          </item>
          <item>
           <widget class="QLineEdit" name="taskNameInput">
+           <property name="font">
+            <font>
+             <family>Calibre</family>
+            </font>
+           </property>
            <property name="styleSheet">
             <string notr="true">QLineEdit{
 	background-color: white;
@@ -2535,8 +2669,19 @@ QPushButton:pressed{
        </item>
        <item>
         <layout class="QHBoxLayout" name="addTaskNote">
+         <property name="topMargin">
+          <number>20</number>
+         </property>
+         <property name="bottomMargin">
+          <number>20</number>
+         </property>
          <item>
           <widget class="QLabel" name="noteTxt">
+           <property name="font">
+            <font>
+             <family>Calibre</family>
+            </font>
+           </property>
            <property name="styleSheet">
             <string notr="true">QLabel{
 	color:gray;
@@ -2549,6 +2694,11 @@ QPushButton:pressed{
          </item>
          <item>
           <widget class="QLineEdit" name="taskNoteInput">
+           <property name="font">
+            <font>
+             <family>Calibre</family>
+            </font>
+           </property>
            <property name="styleSheet">
             <string notr="true">QLineEdit{
 	background-color: white;
@@ -2560,8 +2710,25 @@ QPushButton:pressed{
        </item>
        <item>
         <layout class="QHBoxLayout" name="addTaskDate">
+         <property name="topMargin">
+          <number>20</number>
+         </property>
+         <property name="bottomMargin">
+          <number>20</number>
+         </property>
          <item>
           <widget class="QLabel" name="dateTxt">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Ignored">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <family>Calibre</family>
+            </font>
+           </property>
            <property name="styleSheet">
             <string notr="true">QLabel{
 	color:gray;
@@ -2574,6 +2741,11 @@ QPushButton:pressed{
          </item>
          <item>
           <widget class="QLineEdit" name="taskDateInput">
+           <property name="font">
+            <font>
+             <family>Calibre</family>
+            </font>
+           </property>
            <property name="styleSheet">
             <string notr="true">QLineEdit{
 	background-color: white;
@@ -2586,7 +2758,7 @@ QPushButton:pressed{
        <item>
         <widget class="QPushButton" name="addTBtn">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -2819,7 +2991,8 @@ QPushButton:pressed{
          </property>
          <property name="font">
           <font>
-           <pointsize>18</pointsize>
+           <family>Calibre</family>
+           <pointsize>12</pointsize>
           </font>
          </property>
          <property name="styleSheet">
@@ -2848,16 +3021,16 @@ QPushButton:pressed{
      <widget class="QListWidget" name="SubTaskDisplay">
       <property name="geometry">
        <rect>
-        <x>483</x>
+        <x>550</x>
         <y>50</y>
-        <width>217</width>
-        <height>281</height>
+        <width>251</width>
+        <height>291</height>
        </rect>
       </property>
       <property name="font">
        <font>
         <family>Calibre</family>
-        <pointsize>14</pointsize>
+        <pointsize>12</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -2872,11 +3045,16 @@ QPushButton:pressed{
      <widget class="QGroupBox" name="AddSubTask">
       <property name="geometry">
        <rect>
-        <x>483</x>
+        <x>550</x>
         <y>50</y>
-        <width>217</width>
-        <height>281</height>
+        <width>251</width>
+        <height>291</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Calibre</family>
+       </font>
       </property>
       <property name="styleSheet">
        <string notr="true">QGroupBox{
@@ -2897,6 +3075,7 @@ QPushButton:pressed{
          </property>
          <property name="font">
           <font>
+           <family>Calibre</family>
            <bold>true</bold>
           </font>
          </property>
@@ -2915,8 +3094,22 @@ QPushButton:pressed{
        </item>
        <item>
         <layout class="QHBoxLayout" name="addSubTaskName">
+         <property name="topMargin">
+          <number>83</number>
+         </property>
+         <property name="rightMargin">
+          <number>9</number>
+         </property>
+         <property name="bottomMargin">
+          <number>83</number>
+         </property>
          <item>
           <widget class="QLabel" name="subTaskNameTxt">
+           <property name="font">
+            <font>
+             <family>Calibre</family>
+            </font>
+           </property>
            <property name="styleSheet">
             <string notr="true">QLabel{
 	color:gray;
@@ -2929,6 +3122,11 @@ QPushButton:pressed{
          </item>
          <item>
           <widget class="QLineEdit" name="subTaskNameInput">
+           <property name="font">
+            <font>
+             <family>Calibre</family>
+            </font>
+           </property>
            <property name="styleSheet">
             <string notr="true">QLineEdit{
 	background-color: white;
@@ -2941,7 +3139,7 @@ QPushButton:pressed{
        <item>
         <widget class="QPushButton" name="addSubTaskBtn">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -3174,7 +3372,8 @@ QPushButton:pressed{
          </property>
          <property name="font">
           <font>
-           <pointsize>18</pointsize>
+           <family>Calibre</family>
+           <pointsize>12</pointsize>
           </font>
          </property>
          <property name="styleSheet">
@@ -3203,7 +3402,7 @@ QPushButton:pressed{
      <widget class="QLabel" name="TaskListsTitle">
       <property name="geometry">
        <rect>
-        <x>90</x>
+        <x>100</x>
         <y>20</y>
         <width>131</width>
         <height>16</height>
@@ -3211,7 +3410,8 @@ QPushButton:pressed{
       </property>
       <property name="font">
        <font>
-        <pointsize>18</pointsize>
+        <family>Calibre</family>
+        <pointsize>12</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -3222,11 +3422,14 @@ QPushButton:pressed{
       <property name="text">
        <string>T A S K  L I S T S</string>
       </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
      </widget>
      <widget class="QLabel" name="TasksTitle">
       <property name="geometry">
        <rect>
-        <x>330</x>
+        <x>380</x>
         <y>20</y>
         <width>71</width>
         <height>16</height>
@@ -3234,7 +3437,8 @@ QPushButton:pressed{
       </property>
       <property name="font">
        <font>
-        <pointsize>18</pointsize>
+        <family>Calibre</family>
+        <pointsize>12</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -3245,11 +3449,14 @@ QPushButton:pressed{
       <property name="text">
        <string>T A S K S</string>
       </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
      </widget>
      <widget class="QLabel" name="SubTasksTitle">
       <property name="geometry">
        <rect>
-        <x>530</x>
+        <x>620</x>
         <y>20</y>
         <width>121</width>
         <height>16</height>
@@ -3257,7 +3464,8 @@ QPushButton:pressed{
       </property>
       <property name="font">
        <font>
-        <pointsize>18</pointsize>
+        <family>Calibre</family>
+        <pointsize>12</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -3268,15 +3476,28 @@ QPushButton:pressed{
       <property name="text">
        <string>S U B T A S K S</string>
       </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
      </widget>
+     <zorder>Menu</zorder>
+     <zorder>TaskListsDisplay</zorder>
+     <zorder>AddTL</zorder>
+     <zorder>TasksDisplay</zorder>
+     <zorder>AddT</zorder>
+     <zorder>SubTaskDisplay</zorder>
+     <zorder>TaskListsTitle</zorder>
+     <zorder>TasksTitle</zorder>
+     <zorder>SubTasksTitle</zorder>
+     <zorder>AddSubTask</zorder>
     </widget>
     <widget class="QPushButton" name="LogOut">
      <property name="geometry">
       <rect>
-       <x>630</x>
-       <y>40</y>
-       <width>111</width>
-       <height>21</height>
+       <x>680</x>
+       <y>60</y>
+       <width>151</width>
+       <height>31</height>
       </rect>
      </property>
      <property name="palette">
@@ -3478,6 +3699,12 @@ QPushButton:pressed{
        </disabled>
       </palette>
      </property>
+     <property name="font">
+      <font>
+       <family>Calibre</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
      <property name="styleSheet">
       <string notr="true">QPushButton{
 	background-color: gray;
@@ -3500,15 +3727,16 @@ QPushButton:pressed{
     <widget class="QLabel" name="Title">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>20</y>
-       <width>191</width>
-       <height>41</height>
+       <x>30</x>
+       <y>30</y>
+       <width>231</width>
+       <height>61</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <pointsize>20</pointsize>
+       <family>Calibre</family>
+       <pointsize>14</pointsize>
       </font>
      </property>
      <property name="styleSheet">
@@ -3535,8 +3763,8 @@ QPushButton:pressed{
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
-     <height>21</height>
+     <width>1649</width>
+     <height>20</height>
     </rect>
    </property>
   </widget>

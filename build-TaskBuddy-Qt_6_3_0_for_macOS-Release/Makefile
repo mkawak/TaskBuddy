@@ -52,24 +52,21 @@ OBJECTS_DIR   = ./
 
 ####### Files
 
-SOURCES       = ../TaskBuddy/Date.cpp \
-		../TaskBuddy/TaskList.cpp \
-		../TaskBuddy/Time.cpp \
+SOURCES       = ../TaskBuddy/TaskList.cpp \
 		../TaskBuddy/UserAccount.cpp \
 		../TaskBuddy/main.cpp \
 		../TaskBuddy/subtask.cpp \
 		../TaskBuddy/task.cpp \
 		../TaskBuddy/taskbuddy.cpp moc_taskbuddy.cpp
-OBJECTS       = Date.o \
-		TaskList.o \
-		Time.o \
+OBJECTS       = TaskList.o \
 		UserAccount.o \
 		main.o \
 		subtask.o \
 		task.o \
 		taskbuddy.o \
 		moc_taskbuddy.o
-DIST          = ../../Qt/6.3.0/macos/mkspecs/features/spec_pre.prf \
+DIST          = ../build-TaskBuddy-Qt_6_3_0_WebAssembly-Debug/TaskBuddy.html \
+		../../Qt/6.3.0/macos/mkspecs/features/spec_pre.prf \
 		../../Qt/6.3.0/macos/mkspecs/features/device_config.prf \
 		../../Qt/6.3.0/macos/mkspecs/common/unix.conf \
 		../../Qt/6.3.0/macos/mkspecs/common/mac.conf \
@@ -184,6 +181,7 @@ DIST          = ../../Qt/6.3.0/macos/mkspecs/features/spec_pre.prf \
 		../../Qt/6.3.0/macos/mkspecs/features/qt_config.prf \
 		../../Qt/6.3.0/macos/mkspecs/macx-clang/qmake.conf \
 		../../Qt/6.3.0/macos/mkspecs/features/spec_post.prf \
+		../TaskBuddy/.qmake.stash \
 		../../Qt/6.3.0/macos/mkspecs/features/exclusive_builds.prf \
 		../../Qt/6.3.0/macos/mkspecs/features/mac/sdk.prf \
 		../../Qt/6.3.0/macos/mkspecs/features/toolchain.prf \
@@ -215,15 +213,11 @@ DIST          = ../../Qt/6.3.0/macos/mkspecs/features/spec_pre.prf \
 		../TaskBuddy/TaskBuddy.pro ../TaskList.hpp \
 		../subtask.hpp \
 		../task.hpp \
-		../TaskBuddy/Date.hpp \
 		../TaskBuddy/TaskList.hpp \
-		../TaskBuddy/Time.hpp \
 		../TaskBuddy/UserAccount.hpp \
 		../TaskBuddy/subtask.hpp \
 		../TaskBuddy/task.hpp \
-		../TaskBuddy/taskbuddy.h ../TaskBuddy/Date.cpp \
-		../TaskBuddy/TaskList.cpp \
-		../TaskBuddy/Time.cpp \
+		../TaskBuddy/taskbuddy.h ../TaskBuddy/TaskList.cpp \
 		../TaskBuddy/UserAccount.cpp \
 		../TaskBuddy/main.cpp \
 		../TaskBuddy/subtask.cpp \
@@ -237,7 +231,7 @@ TARGET        = TaskBuddy.app/Contents/MacOS/TaskBuddy
 EXPORT_QMAKE_MAC_SDK = macosx
 EXPORT_QMAKE_MAC_SDK_VERSION = 12.1
 EXPORT_QMAKE_XCODE_DEVELOPER_PATH = /Applications/Xcode.app/Contents/Developer
-EXPORT__QMAKE_STASH_ = 
+EXPORT__QMAKE_STASH_ = /Users/allisonchu/final-project-mkawa025-allisonchuu-c24wong-lightof/build-TaskBuddy-Qt_6_3_0_for_macOS-Release/.qmake.stash
 EXPORT_VALID_ARCHS = x86_64 arm64
 EXPORT_DEFAULT_ARCHS = x86_64
 EXPORT_ARCHS = $(filter $(EXPORT_VALID_ARCHS), $(if $(ARCHS), $(ARCHS), $(if $(EXPORT_DEFAULT_ARCHS), $(EXPORT_DEFAULT_ARCHS), $(EXPORT_VALID_ARCHS))))
@@ -368,6 +362,7 @@ Makefile: ../TaskBuddy/TaskBuddy.pro ../../Qt/6.3.0/macos/mkspecs/macx-clang/qma
 		../../Qt/6.3.0/macos/mkspecs/features/qt_config.prf \
 		../../Qt/6.3.0/macos/mkspecs/macx-clang/qmake.conf \
 		../../Qt/6.3.0/macos/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		../../Qt/6.3.0/macos/mkspecs/features/exclusive_builds.prf \
 		../../Qt/6.3.0/macos/mkspecs/features/mac/sdk.prf \
 		../../Qt/6.3.0/macos/mkspecs/features/toolchain.prf \
@@ -516,6 +511,7 @@ Makefile: ../TaskBuddy/TaskBuddy.pro ../../Qt/6.3.0/macos/mkspecs/macx-clang/qma
 ../../Qt/6.3.0/macos/mkspecs/features/qt_config.prf:
 ../../Qt/6.3.0/macos/mkspecs/macx-clang/qmake.conf:
 ../../Qt/6.3.0/macos/mkspecs/features/spec_post.prf:
+.qmake.stash:
 ../../Qt/6.3.0/macos/mkspecs/features/exclusive_builds.prf:
 ../../Qt/6.3.0/macos/mkspecs/features/mac/sdk.prf:
 ../../Qt/6.3.0/macos/mkspecs/features/toolchain.prf:
@@ -577,8 +573,8 @@ dist: distdir FORCE
 distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
-	$(COPY_FILE) --parents ../TaskList.hpp ../subtask.hpp ../task.hpp ../TaskBuddy/Date.hpp ../TaskBuddy/TaskList.hpp ../TaskBuddy/Time.hpp ../TaskBuddy/UserAccount.hpp ../TaskBuddy/subtask.hpp ../TaskBuddy/task.hpp ../TaskBuddy/taskbuddy.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../TaskBuddy/Date.cpp ../TaskBuddy/TaskList.cpp ../TaskBuddy/Time.cpp ../TaskBuddy/UserAccount.cpp ../TaskBuddy/main.cpp ../TaskBuddy/subtask.cpp ../TaskBuddy/task.cpp ../TaskBuddy/taskbuddy.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../TaskList.hpp ../subtask.hpp ../task.hpp ../TaskBuddy/TaskList.hpp ../TaskBuddy/UserAccount.hpp ../TaskBuddy/subtask.hpp ../TaskBuddy/task.hpp ../TaskBuddy/taskbuddy.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../TaskBuddy/TaskList.cpp ../TaskBuddy/UserAccount.cpp ../TaskBuddy/main.cpp ../TaskBuddy/subtask.cpp ../TaskBuddy/task.cpp ../TaskBuddy/taskbuddy.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../TaskBuddy/taskbuddy.ui $(DISTDIR)/
 
 
@@ -589,6 +585,7 @@ clean: compiler_clean
 
 distclean: clean 
 	-$(DEL_FILE) -r TaskBuddy.app
+	-$(DEL_FILE) .qmake.stash
 	-$(DEL_FILE) Makefile
 
 
@@ -643,18 +640,12 @@ compiler_clean: compiler_moc_header_clean compiler_uic_clean
 
 ####### Compile
 
-Date.o: ../TaskBuddy/Date.cpp ../TaskBuddy/Date.hpp
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o Date.o ../TaskBuddy/Date.cpp
-
 TaskList.o: ../TaskBuddy/TaskList.cpp ../TaskBuddy/TaskList.hpp \
 		../TaskBuddy/task.hpp \
 		../TaskBuddy/subtask.hpp \
 		../../Qt/6.3.0/macos/lib/QtCore.framework/Headers/QDebug \
 		../../Qt/6.3.0/macos/lib/QtCore.framework/Headers/qdebug.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o TaskList.o ../TaskBuddy/TaskList.cpp
-
-Time.o: ../TaskBuddy/Time.cpp ../TaskBuddy/Time.hpp
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o Time.o ../TaskBuddy/Time.cpp
 
 UserAccount.o: ../TaskBuddy/UserAccount.cpp ../../Qt/6.3.0/macos/lib/QtCore.framework/Headers/QDebug \
 		../../Qt/6.3.0/macos/lib/QtCore.framework/Headers/qdebug.h \

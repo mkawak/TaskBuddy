@@ -95,15 +95,24 @@ public:
     {
         if (TaskBuddy->objectName().isEmpty())
             TaskBuddy->setObjectName(QString::fromUtf8("TaskBuddy"));
-        TaskBuddy->resize(800, 600);
+        TaskBuddy->resize(1649, 881);
+        QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(TaskBuddy->sizePolicy().hasHeightForWidth());
+        TaskBuddy->setSizePolicy(sizePolicy);
+        QFont font;
+        font.setPointSize(12);
+        TaskBuddy->setFont(font);
         centralwidget = new QWidget(TaskBuddy);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         SignIn = new QGroupBox(centralwidget);
         SignIn->setObjectName(QString::fromUtf8("SignIn"));
-        SignIn->setGeometry(QRect(230, 190, 331, 211));
-        QFont font;
-        font.setPointSize(18);
-        SignIn->setFont(font);
+        SignIn->setGeometry(QRect(230, 190, 411, 251));
+        QFont font1;
+        font1.setFamilies({QString::fromUtf8("Calibre")});
+        font1.setPointSize(18);
+        SignIn->setFont(font1);
         SignIn->setStyleSheet(QString::fromUtf8("QGroupBox{\n"
 "	background-color: #aad8e5;\n"
 "	color: white;\n"
@@ -114,12 +123,9 @@ public:
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         SignInTxt = new QLabel(SignIn);
         SignInTxt->setObjectName(QString::fromUtf8("SignInTxt"));
-        QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed);
-        sizePolicy.setHorizontalStretch(0);
-        sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(SignInTxt->sizePolicy().hasHeightForWidth());
         SignInTxt->setSizePolicy(sizePolicy);
-        SignInTxt->setFont(font);
+        SignInTxt->setFont(font1);
         SignInTxt->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	color: white;\n"
 "}"));
@@ -129,8 +135,12 @@ public:
 
         UserName = new QHBoxLayout();
         UserName->setObjectName(QString::fromUtf8("UserName"));
+        UserName->setContentsMargins(10, 40, 10, 40);
         UserNameTxt = new QLabel(SignIn);
         UserNameTxt->setObjectName(QString::fromUtf8("UserNameTxt"));
+        QFont font2;
+        font2.setFamilies({QString::fromUtf8("Calibre")});
+        UserNameTxt->setFont(font2);
         UserNameTxt->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	color: white;\n"
 "}"));
@@ -139,6 +149,7 @@ public:
 
         UserNameInput = new QLineEdit(SignIn);
         UserNameInput->setObjectName(QString::fromUtf8("UserNameInput"));
+        UserNameInput->setFont(font2);
         UserNameInput->setStyleSheet(QString::fromUtf8("QLineEdit{\n"
 "	background-color: white;\n"
 "	color: black;\n"
@@ -153,13 +164,21 @@ public:
 
         LoginButton = new QPushButton(SignIn);
         LoginButton->setObjectName(QString::fromUtf8("LoginButton"));
-        LoginButton->setFont(font);
+        QSizePolicy sizePolicy1(QSizePolicy::Minimum, QSizePolicy::Preferred);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(LoginButton->sizePolicy().hasHeightForWidth());
+        LoginButton->setSizePolicy(sizePolicy1);
+        QFont font3;
+        font3.setFamilies({QString::fromUtf8("Calibre")});
+        font3.setPointSize(14);
+        LoginButton->setFont(font3);
         LoginButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	background-color: white;\n"
 "	color: gray;\n"
 "	border-radius: 5px;\n"
-"	padding-top: 10px;\n"
-"	padding-bottom: 5px;\n"
+"	margin-left:10px;\n"
+"	margin-right:10px;\n"
 "}\n"
 "\n"
 "QPushButton:pressed{\n"
@@ -171,13 +190,15 @@ public:
 
         CreateAccButton = new QPushButton(SignIn);
         CreateAccButton->setObjectName(QString::fromUtf8("CreateAccButton"));
-        CreateAccButton->setFont(font);
+        sizePolicy1.setHeightForWidth(CreateAccButton->sizePolicy().hasHeightForWidth());
+        CreateAccButton->setSizePolicy(sizePolicy1);
+        CreateAccButton->setFont(font3);
         CreateAccButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	background-color: white;\n"
 "	color: gray;\n"
 "	border-radius: 5px;\n"
-"	padding-top: 10px;\n"
-"	padding-bottom: 5px;\n"
+"	margin-left:10px;\n"
+"	margin-right:10px;\n"
 "}\n"
 "\n"
 "QPushButton:pressed{\n"
@@ -189,26 +210,32 @@ public:
 
         taskHub = new QGroupBox(centralwidget);
         taskHub->setObjectName(QString::fromUtf8("taskHub"));
-        taskHub->setGeometry(QRect(10, 0, 781, 561));
+        taskHub->setGeometry(QRect(0, 0, 881, 651));
+        QFont font4;
+        font4.setFamilies({QString::fromUtf8("Calibre")});
+        font4.setPointSize(12);
+        taskHub->setFont(font4);
         groupBox = new QGroupBox(taskHub);
         groupBox->setObjectName(QString::fromUtf8("groupBox"));
-        groupBox->setGeometry(QRect(20, 70, 741, 481));
+        groupBox->setGeometry(QRect(20, 100, 831, 531));
+        groupBox->setFont(font2);
         groupBox->setStyleSheet(QString::fromUtf8("QGroupBox{\n"
 "	background-color: #d1eaf1;\n"
 "	border-radius: 30px;\n"
 "}"));
         Menu = new QGroupBox(groupBox);
         Menu->setObjectName(QString::fromUtf8("Menu"));
-        Menu->setGeometry(QRect(28, 340, 681, 141));
+        Menu->setGeometry(QRect(20, 350, 791, 181));
+        Menu->setFont(font2);
         gridLayout_2 = new QGridLayout(Menu);
         gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
         addTaskMenuBtn = new QPushButton(Menu);
         addTaskMenuBtn->setObjectName(QString::fromUtf8("addTaskMenuBtn"));
-        QSizePolicy sizePolicy1(QSizePolicy::Preferred, QSizePolicy::Preferred);
-        sizePolicy1.setHorizontalStretch(0);
-        sizePolicy1.setVerticalStretch(0);
-        sizePolicy1.setHeightForWidth(addTaskMenuBtn->sizePolicy().hasHeightForWidth());
-        addTaskMenuBtn->setSizePolicy(sizePolicy1);
+        QSizePolicy sizePolicy2(QSizePolicy::Preferred, QSizePolicy::Preferred);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(addTaskMenuBtn->sizePolicy().hasHeightForWidth());
+        addTaskMenuBtn->setSizePolicy(sizePolicy2);
         QPalette palette;
         QBrush brush(QColor(255, 255, 255, 255));
         brush.setStyle(Qt::SolidPattern);
@@ -242,7 +269,7 @@ public:
         palette.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush);
 #endif
         addTaskMenuBtn->setPalette(palette);
-        addTaskMenuBtn->setFont(font);
+        addTaskMenuBtn->setFont(font4);
         addTaskMenuBtn->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	background-color: #7dc3d7;\n"
 "	color: white;\n"
@@ -262,8 +289,8 @@ public:
 
         showTaskMenuBtn = new QPushButton(Menu);
         showTaskMenuBtn->setObjectName(QString::fromUtf8("showTaskMenuBtn"));
-        sizePolicy1.setHeightForWidth(showTaskMenuBtn->sizePolicy().hasHeightForWidth());
-        showTaskMenuBtn->setSizePolicy(sizePolicy1);
+        sizePolicy2.setHeightForWidth(showTaskMenuBtn->sizePolicy().hasHeightForWidth());
+        showTaskMenuBtn->setSizePolicy(sizePolicy2);
         QPalette palette1;
         palette1.setBrush(QPalette::Active, QPalette::WindowText, brush);
         palette1.setBrush(QPalette::Active, QPalette::Button, brush1);
@@ -293,7 +320,7 @@ public:
         palette1.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush);
 #endif
         showTaskMenuBtn->setPalette(palette1);
-        showTaskMenuBtn->setFont(font);
+        showTaskMenuBtn->setFont(font4);
         showTaskMenuBtn->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	background-color: #7dc3d7;\n"
 "	color: white;\n"
@@ -313,8 +340,8 @@ public:
 
         showSubTasks = new QPushButton(Menu);
         showSubTasks->setObjectName(QString::fromUtf8("showSubTasks"));
-        sizePolicy1.setHeightForWidth(showSubTasks->sizePolicy().hasHeightForWidth());
-        showSubTasks->setSizePolicy(sizePolicy1);
+        sizePolicy2.setHeightForWidth(showSubTasks->sizePolicy().hasHeightForWidth());
+        showSubTasks->setSizePolicy(sizePolicy2);
         QPalette palette2;
         palette2.setBrush(QPalette::Active, QPalette::WindowText, brush);
         palette2.setBrush(QPalette::Active, QPalette::Button, brush1);
@@ -344,7 +371,7 @@ public:
         palette2.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush);
 #endif
         showSubTasks->setPalette(palette2);
-        showSubTasks->setFont(font);
+        showSubTasks->setFont(font4);
         showSubTasks->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	background-color: #7dc3d7;\n"
 "	color: white;\n"
@@ -364,8 +391,8 @@ public:
 
         deleteSTMenuBtn = new QPushButton(Menu);
         deleteSTMenuBtn->setObjectName(QString::fromUtf8("deleteSTMenuBtn"));
-        sizePolicy1.setHeightForWidth(deleteSTMenuBtn->sizePolicy().hasHeightForWidth());
-        deleteSTMenuBtn->setSizePolicy(sizePolicy1);
+        sizePolicy2.setHeightForWidth(deleteSTMenuBtn->sizePolicy().hasHeightForWidth());
+        deleteSTMenuBtn->setSizePolicy(sizePolicy2);
         QPalette palette3;
         palette3.setBrush(QPalette::Active, QPalette::WindowText, brush);
         palette3.setBrush(QPalette::Active, QPalette::Button, brush1);
@@ -395,7 +422,7 @@ public:
         palette3.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush);
 #endif
         deleteSTMenuBtn->setPalette(palette3);
-        deleteSTMenuBtn->setFont(font);
+        deleteSTMenuBtn->setFont(font4);
         deleteSTMenuBtn->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	background-color: #7dc3d7;\n"
 "	color: white;\n"
@@ -415,8 +442,8 @@ public:
 
         addSTMenuBtn = new QPushButton(Menu);
         addSTMenuBtn->setObjectName(QString::fromUtf8("addSTMenuBtn"));
-        sizePolicy1.setHeightForWidth(addSTMenuBtn->sizePolicy().hasHeightForWidth());
-        addSTMenuBtn->setSizePolicy(sizePolicy1);
+        sizePolicy2.setHeightForWidth(addSTMenuBtn->sizePolicy().hasHeightForWidth());
+        addSTMenuBtn->setSizePolicy(sizePolicy2);
         QPalette palette4;
         palette4.setBrush(QPalette::Active, QPalette::WindowText, brush);
         palette4.setBrush(QPalette::Active, QPalette::Button, brush1);
@@ -446,7 +473,7 @@ public:
         palette4.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush);
 #endif
         addSTMenuBtn->setPalette(palette4);
-        addSTMenuBtn->setFont(font);
+        addSTMenuBtn->setFont(font4);
         addSTMenuBtn->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	background-color: #7dc3d7;\n"
 "	color: white;\n"
@@ -466,8 +493,8 @@ public:
 
         deleteTaskMenuBtn = new QPushButton(Menu);
         deleteTaskMenuBtn->setObjectName(QString::fromUtf8("deleteTaskMenuBtn"));
-        sizePolicy1.setHeightForWidth(deleteTaskMenuBtn->sizePolicy().hasHeightForWidth());
-        deleteTaskMenuBtn->setSizePolicy(sizePolicy1);
+        sizePolicy2.setHeightForWidth(deleteTaskMenuBtn->sizePolicy().hasHeightForWidth());
+        deleteTaskMenuBtn->setSizePolicy(sizePolicy2);
         QPalette palette5;
         palette5.setBrush(QPalette::Active, QPalette::WindowText, brush);
         palette5.setBrush(QPalette::Active, QPalette::Button, brush1);
@@ -497,7 +524,7 @@ public:
         palette5.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush);
 #endif
         deleteTaskMenuBtn->setPalette(palette5);
-        deleteTaskMenuBtn->setFont(font);
+        deleteTaskMenuBtn->setFont(font4);
         deleteTaskMenuBtn->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	background-color: #7dc3d7;\n"
 "	color: white;\n"
@@ -517,8 +544,8 @@ public:
 
         deleteTLMenuBtn = new QPushButton(Menu);
         deleteTLMenuBtn->setObjectName(QString::fromUtf8("deleteTLMenuBtn"));
-        sizePolicy1.setHeightForWidth(deleteTLMenuBtn->sizePolicy().hasHeightForWidth());
-        deleteTLMenuBtn->setSizePolicy(sizePolicy1);
+        sizePolicy2.setHeightForWidth(deleteTLMenuBtn->sizePolicy().hasHeightForWidth());
+        deleteTLMenuBtn->setSizePolicy(sizePolicy2);
         QPalette palette6;
         palette6.setBrush(QPalette::Active, QPalette::WindowText, brush);
         palette6.setBrush(QPalette::Active, QPalette::Button, brush1);
@@ -548,7 +575,7 @@ public:
         palette6.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush);
 #endif
         deleteTLMenuBtn->setPalette(palette6);
-        deleteTLMenuBtn->setFont(font);
+        deleteTLMenuBtn->setFont(font4);
         deleteTLMenuBtn->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	background-color: #7dc3d7;\n"
 "	color: white;\n"
@@ -568,8 +595,8 @@ public:
 
         addTLMenuBtn = new QPushButton(Menu);
         addTLMenuBtn->setObjectName(QString::fromUtf8("addTLMenuBtn"));
-        sizePolicy1.setHeightForWidth(addTLMenuBtn->sizePolicy().hasHeightForWidth());
-        addTLMenuBtn->setSizePolicy(sizePolicy1);
+        sizePolicy2.setHeightForWidth(addTLMenuBtn->sizePolicy().hasHeightForWidth());
+        addTLMenuBtn->setSizePolicy(sizePolicy2);
         QPalette palette7;
         palette7.setBrush(QPalette::Active, QPalette::WindowText, brush);
         palette7.setBrush(QPalette::Active, QPalette::Button, brush1);
@@ -599,7 +626,7 @@ public:
         palette7.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush);
 #endif
         addTLMenuBtn->setPalette(palette7);
-        addTLMenuBtn->setFont(font);
+        addTLMenuBtn->setFont(font4);
         addTLMenuBtn->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	background-color: #7dc3d7;\n"
 "	color: white;\n"
@@ -619,11 +646,8 @@ public:
 
         TaskListsDisplay = new QListWidget(groupBox);
         TaskListsDisplay->setObjectName(QString::fromUtf8("TaskListsDisplay"));
-        TaskListsDisplay->setGeometry(QRect(37, 50, 217, 281));
-        QFont font1;
-        font1.setFamilies({QString::fromUtf8("Calibre")});
-        font1.setPointSize(14);
-        TaskListsDisplay->setFont(font1);
+        TaskListsDisplay->setGeometry(QRect(30, 50, 251, 291));
+        TaskListsDisplay->setFont(font4);
         TaskListsDisplay->setStyleSheet(QString::fromUtf8("QListWidget{\n"
 "	background-color: white;\n"
 "	border-radius: 30%;\n"
@@ -636,7 +660,8 @@ public:
 "}"));
         AddTL = new QGroupBox(groupBox);
         AddTL->setObjectName(QString::fromUtf8("AddTL"));
-        AddTL->setGeometry(QRect(37, 50, 217, 281));
+        AddTL->setGeometry(QRect(30, 50, 251, 291));
+        AddTL->setFont(font2);
         AddTL->setStyleSheet(QString::fromUtf8("QGroupBox{\n"
 "	background-color: #7dc3d7;\n"
 "}"));
@@ -646,9 +671,10 @@ public:
         addTaskListTitle->setObjectName(QString::fromUtf8("addTaskListTitle"));
         sizePolicy.setHeightForWidth(addTaskListTitle->sizePolicy().hasHeightForWidth());
         addTaskListTitle->setSizePolicy(sizePolicy);
-        QFont font2;
-        font2.setBold(true);
-        addTaskListTitle->setFont(font2);
+        QFont font5;
+        font5.setFamilies({QString::fromUtf8("Calibre")});
+        font5.setBold(true);
+        addTaskListTitle->setFont(font5);
         addTaskListTitle->setStyleSheet(QString::fromUtf8("QLabel{\n"
 "	color:white;\n"
 "}"));
@@ -658,8 +684,10 @@ public:
 
         addTaskListName = new QHBoxLayout();
         addTaskListName->setObjectName(QString::fromUtf8("addTaskListName"));
+        addTaskListName->setContentsMargins(-1, 59, -1, 10);
         taskListNameTxt = new QLabel(AddTL);
         taskListNameTxt->setObjectName(QString::fromUtf8("taskListNameTxt"));
+        taskListNameTxt->setFont(font2);
         taskListNameTxt->setStyleSheet(QString::fromUtf8("QLabel{\n"
 "	color:gray;\n"
 "}"));
@@ -668,6 +696,7 @@ public:
 
         taskListNameInput = new QLineEdit(AddTL);
         taskListNameInput->setObjectName(QString::fromUtf8("taskListNameInput"));
+        taskListNameInput->setFont(font2);
         taskListNameInput->setStyleSheet(QString::fromUtf8("QLineEdit{\n"
 "	background-color: white;\n"
 "}"));
@@ -679,8 +708,10 @@ public:
 
         addTaskListCat = new QHBoxLayout();
         addTaskListCat->setObjectName(QString::fromUtf8("addTaskListCat"));
+        addTaskListCat->setContentsMargins(-1, 10, -1, 59);
         catTxt = new QLabel(AddTL);
         catTxt->setObjectName(QString::fromUtf8("catTxt"));
+        catTxt->setFont(font2);
         catTxt->setStyleSheet(QString::fromUtf8("QLabel{\n"
 "	color:gray;\n"
 "}"));
@@ -689,6 +720,7 @@ public:
 
         taskListCatInput = new QLineEdit(AddTL);
         taskListCatInput->setObjectName(QString::fromUtf8("taskListCatInput"));
+        taskListCatInput->setFont(font2);
         taskListCatInput->setStyleSheet(QString::fromUtf8("QLineEdit{\n"
 "	background-color: white;\n"
 "}"));
@@ -700,8 +732,8 @@ public:
 
         addTLBtn = new QPushButton(AddTL);
         addTLBtn->setObjectName(QString::fromUtf8("addTLBtn"));
-        sizePolicy.setHeightForWidth(addTLBtn->sizePolicy().hasHeightForWidth());
-        addTLBtn->setSizePolicy(sizePolicy);
+        sizePolicy2.setHeightForWidth(addTLBtn->sizePolicy().hasHeightForWidth());
+        addTLBtn->setSizePolicy(sizePolicy2);
         QPalette palette8;
         QBrush brush2(QColor(128, 128, 128, 255));
         brush2.setStyle(Qt::SolidPattern);
@@ -736,7 +768,7 @@ public:
         palette8.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush2);
 #endif
         addTLBtn->setPalette(palette8);
-        addTLBtn->setFont(font);
+        addTLBtn->setFont(font4);
         addTLBtn->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	background-color: white;\n"
 "	color: grey;\n"
@@ -756,8 +788,8 @@ public:
 
         TasksDisplay = new QListWidget(groupBox);
         TasksDisplay->setObjectName(QString::fromUtf8("TasksDisplay"));
-        TasksDisplay->setGeometry(QRect(260, 50, 217, 281));
-        TasksDisplay->setFont(font1);
+        TasksDisplay->setGeometry(QRect(290, 50, 251, 291));
+        TasksDisplay->setFont(font4);
         TasksDisplay->setStyleSheet(QString::fromUtf8("QListWidget{\n"
 "	background-color: white;\n"
 "	border-radius: 30%;\n"
@@ -765,7 +797,8 @@ public:
 "}"));
         AddT = new QGroupBox(groupBox);
         AddT->setObjectName(QString::fromUtf8("AddT"));
-        AddT->setGeometry(QRect(260, 50, 217, 281));
+        AddT->setGeometry(QRect(290, 50, 251, 291));
+        AddT->setFont(font2);
         AddT->setStyleSheet(QString::fromUtf8("QGroupBox{\n"
 "	background-color: #7dc3d7;\n"
 "}"));
@@ -775,7 +808,7 @@ public:
         addTaskTitle->setObjectName(QString::fromUtf8("addTaskTitle"));
         sizePolicy.setHeightForWidth(addTaskTitle->sizePolicy().hasHeightForWidth());
         addTaskTitle->setSizePolicy(sizePolicy);
-        addTaskTitle->setFont(font2);
+        addTaskTitle->setFont(font5);
         addTaskTitle->setStyleSheet(QString::fromUtf8("QLabel{\n"
 "	color:white;\n"
 "}"));
@@ -785,8 +818,10 @@ public:
 
         addTaskName = new QHBoxLayout();
         addTaskName->setObjectName(QString::fromUtf8("addTaskName"));
+        addTaskName->setContentsMargins(-1, 20, -1, 20);
         taskTxt = new QLabel(AddT);
         taskTxt->setObjectName(QString::fromUtf8("taskTxt"));
+        taskTxt->setFont(font2);
         taskTxt->setStyleSheet(QString::fromUtf8("QLabel{\n"
 "	color:gray;\n"
 "}"));
@@ -795,6 +830,7 @@ public:
 
         taskNameInput = new QLineEdit(AddT);
         taskNameInput->setObjectName(QString::fromUtf8("taskNameInput"));
+        taskNameInput->setFont(font2);
         taskNameInput->setStyleSheet(QString::fromUtf8("QLineEdit{\n"
 "	background-color: white;\n"
 "}"));
@@ -806,8 +842,10 @@ public:
 
         addTaskNote = new QHBoxLayout();
         addTaskNote->setObjectName(QString::fromUtf8("addTaskNote"));
+        addTaskNote->setContentsMargins(-1, 20, -1, 20);
         noteTxt = new QLabel(AddT);
         noteTxt->setObjectName(QString::fromUtf8("noteTxt"));
+        noteTxt->setFont(font2);
         noteTxt->setStyleSheet(QString::fromUtf8("QLabel{\n"
 "	color:gray;\n"
 "}"));
@@ -816,6 +854,7 @@ public:
 
         taskNoteInput = new QLineEdit(AddT);
         taskNoteInput->setObjectName(QString::fromUtf8("taskNoteInput"));
+        taskNoteInput->setFont(font2);
         taskNoteInput->setStyleSheet(QString::fromUtf8("QLineEdit{\n"
 "	background-color: white;\n"
 "}"));
@@ -827,8 +866,15 @@ public:
 
         addTaskDate = new QHBoxLayout();
         addTaskDate->setObjectName(QString::fromUtf8("addTaskDate"));
+        addTaskDate->setContentsMargins(-1, 20, -1, 20);
         dateTxt = new QLabel(AddT);
         dateTxt->setObjectName(QString::fromUtf8("dateTxt"));
+        QSizePolicy sizePolicy3(QSizePolicy::Preferred, QSizePolicy::Ignored);
+        sizePolicy3.setHorizontalStretch(0);
+        sizePolicy3.setVerticalStretch(0);
+        sizePolicy3.setHeightForWidth(dateTxt->sizePolicy().hasHeightForWidth());
+        dateTxt->setSizePolicy(sizePolicy3);
+        dateTxt->setFont(font2);
         dateTxt->setStyleSheet(QString::fromUtf8("QLabel{\n"
 "	color:gray;\n"
 "}"));
@@ -837,6 +883,7 @@ public:
 
         taskDateInput = new QLineEdit(AddT);
         taskDateInput->setObjectName(QString::fromUtf8("taskDateInput"));
+        taskDateInput->setFont(font2);
         taskDateInput->setStyleSheet(QString::fromUtf8("QLineEdit{\n"
 "	background-color: white;\n"
 "}"));
@@ -848,8 +895,8 @@ public:
 
         addTBtn = new QPushButton(AddT);
         addTBtn->setObjectName(QString::fromUtf8("addTBtn"));
-        sizePolicy.setHeightForWidth(addTBtn->sizePolicy().hasHeightForWidth());
-        addTBtn->setSizePolicy(sizePolicy);
+        sizePolicy2.setHeightForWidth(addTBtn->sizePolicy().hasHeightForWidth());
+        addTBtn->setSizePolicy(sizePolicy2);
         QPalette palette9;
         palette9.setBrush(QPalette::Active, QPalette::WindowText, brush2);
         palette9.setBrush(QPalette::Active, QPalette::Button, brush);
@@ -882,7 +929,7 @@ public:
         palette9.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush2);
 #endif
         addTBtn->setPalette(palette9);
-        addTBtn->setFont(font);
+        addTBtn->setFont(font4);
         addTBtn->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	background-color: white;\n"
 "	color: grey;\n"
@@ -902,8 +949,8 @@ public:
 
         SubTaskDisplay = new QListWidget(groupBox);
         SubTaskDisplay->setObjectName(QString::fromUtf8("SubTaskDisplay"));
-        SubTaskDisplay->setGeometry(QRect(483, 50, 217, 281));
-        SubTaskDisplay->setFont(font1);
+        SubTaskDisplay->setGeometry(QRect(550, 50, 251, 291));
+        SubTaskDisplay->setFont(font4);
         SubTaskDisplay->setStyleSheet(QString::fromUtf8("QListWidget{\n"
 "	background-color: white;\n"
 "	border-radius: 30%;\n"
@@ -912,7 +959,8 @@ public:
 ""));
         AddSubTask = new QGroupBox(groupBox);
         AddSubTask->setObjectName(QString::fromUtf8("AddSubTask"));
-        AddSubTask->setGeometry(QRect(483, 50, 217, 281));
+        AddSubTask->setGeometry(QRect(550, 50, 251, 291));
+        AddSubTask->setFont(font2);
         AddSubTask->setStyleSheet(QString::fromUtf8("QGroupBox{\n"
 "	background-color: #7dc3d7;\n"
 "}"));
@@ -922,7 +970,7 @@ public:
         addSubTaskTitle->setObjectName(QString::fromUtf8("addSubTaskTitle"));
         sizePolicy.setHeightForWidth(addSubTaskTitle->sizePolicy().hasHeightForWidth());
         addSubTaskTitle->setSizePolicy(sizePolicy);
-        addSubTaskTitle->setFont(font2);
+        addSubTaskTitle->setFont(font5);
         addSubTaskTitle->setStyleSheet(QString::fromUtf8("QLabel{\n"
 "	color:white;\n"
 "}"));
@@ -932,8 +980,10 @@ public:
 
         addSubTaskName = new QHBoxLayout();
         addSubTaskName->setObjectName(QString::fromUtf8("addSubTaskName"));
+        addSubTaskName->setContentsMargins(-1, 83, 9, 83);
         subTaskNameTxt = new QLabel(AddSubTask);
         subTaskNameTxt->setObjectName(QString::fromUtf8("subTaskNameTxt"));
+        subTaskNameTxt->setFont(font2);
         subTaskNameTxt->setStyleSheet(QString::fromUtf8("QLabel{\n"
 "	color:gray;\n"
 "}"));
@@ -942,6 +992,7 @@ public:
 
         subTaskNameInput = new QLineEdit(AddSubTask);
         subTaskNameInput->setObjectName(QString::fromUtf8("subTaskNameInput"));
+        subTaskNameInput->setFont(font2);
         subTaskNameInput->setStyleSheet(QString::fromUtf8("QLineEdit{\n"
 "	background-color: white;\n"
 "}"));
@@ -953,8 +1004,8 @@ public:
 
         addSubTaskBtn = new QPushButton(AddSubTask);
         addSubTaskBtn->setObjectName(QString::fromUtf8("addSubTaskBtn"));
-        sizePolicy.setHeightForWidth(addSubTaskBtn->sizePolicy().hasHeightForWidth());
-        addSubTaskBtn->setSizePolicy(sizePolicy);
+        sizePolicy2.setHeightForWidth(addSubTaskBtn->sizePolicy().hasHeightForWidth());
+        addSubTaskBtn->setSizePolicy(sizePolicy2);
         QPalette palette10;
         palette10.setBrush(QPalette::Active, QPalette::WindowText, brush2);
         palette10.setBrush(QPalette::Active, QPalette::Button, brush);
@@ -987,7 +1038,7 @@ public:
         palette10.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush2);
 #endif
         addSubTaskBtn->setPalette(palette10);
-        addSubTaskBtn->setFont(font);
+        addSubTaskBtn->setFont(font4);
         addSubTaskBtn->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	background-color: white;\n"
 "	color: grey;\n"
@@ -1007,28 +1058,41 @@ public:
 
         TaskListsTitle = new QLabel(groupBox);
         TaskListsTitle->setObjectName(QString::fromUtf8("TaskListsTitle"));
-        TaskListsTitle->setGeometry(QRect(90, 20, 131, 16));
-        TaskListsTitle->setFont(font);
+        TaskListsTitle->setGeometry(QRect(100, 20, 131, 16));
+        TaskListsTitle->setFont(font4);
         TaskListsTitle->setStyleSheet(QString::fromUtf8("QLabel{\n"
 "	color: gray;\n"
 "}"));
+        TaskListsTitle->setAlignment(Qt::AlignCenter);
         TasksTitle = new QLabel(groupBox);
         TasksTitle->setObjectName(QString::fromUtf8("TasksTitle"));
-        TasksTitle->setGeometry(QRect(330, 20, 71, 16));
-        TasksTitle->setFont(font);
+        TasksTitle->setGeometry(QRect(380, 20, 71, 16));
+        TasksTitle->setFont(font4);
         TasksTitle->setStyleSheet(QString::fromUtf8("QLabel{\n"
 "	color: gray;\n"
 "}"));
+        TasksTitle->setAlignment(Qt::AlignCenter);
         SubTasksTitle = new QLabel(groupBox);
         SubTasksTitle->setObjectName(QString::fromUtf8("SubTasksTitle"));
-        SubTasksTitle->setGeometry(QRect(530, 20, 121, 16));
-        SubTasksTitle->setFont(font);
+        SubTasksTitle->setGeometry(QRect(620, 20, 121, 16));
+        SubTasksTitle->setFont(font4);
         SubTasksTitle->setStyleSheet(QString::fromUtf8("QLabel{\n"
 "	color: gray;\n"
 "}"));
+        SubTasksTitle->setAlignment(Qt::AlignCenter);
+        Menu->raise();
+        TaskListsDisplay->raise();
+        AddTL->raise();
+        TasksDisplay->raise();
+        AddT->raise();
+        SubTaskDisplay->raise();
+        TaskListsTitle->raise();
+        TasksTitle->raise();
+        SubTasksTitle->raise();
+        AddSubTask->raise();
         LogOut = new QPushButton(taskHub);
         LogOut->setObjectName(QString::fromUtf8("LogOut"));
-        LogOut->setGeometry(QRect(630, 40, 111, 21));
+        LogOut->setGeometry(QRect(680, 60, 151, 31));
         QPalette palette11;
         palette11.setBrush(QPalette::Active, QPalette::WindowText, brush);
         palette11.setBrush(QPalette::Active, QPalette::Button, brush2);
@@ -1058,6 +1122,10 @@ public:
         palette11.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush);
 #endif
         LogOut->setPalette(palette11);
+        QFont font6;
+        font6.setFamilies({QString::fromUtf8("Calibre")});
+        font6.setPointSize(10);
+        LogOut->setFont(font6);
         LogOut->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	background-color: gray;\n"
 "	color: white;\n"
@@ -1073,9 +1141,7 @@ public:
 "}"));
         Title = new QLabel(taskHub);
         Title->setObjectName(QString::fromUtf8("Title"));
-        Title->setGeometry(QRect(20, 20, 191, 41));
-        QFont font3;
-        font3.setPointSize(20);
+        Title->setGeometry(QRect(30, 30, 231, 61));
         Title->setFont(font3);
         Title->setStyleSheet(QString::fromUtf8("QLabel{\n"
 "	background-color: #aad8e5;\n"
@@ -1089,7 +1155,7 @@ public:
         TaskBuddy->setCentralWidget(centralwidget);
         menubar = new QMenuBar(TaskBuddy);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 800, 21));
+        menubar->setGeometry(QRect(0, 0, 1649, 20));
         TaskBuddy->setMenuBar(menubar);
         statusbar = new QStatusBar(TaskBuddy);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));

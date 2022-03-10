@@ -37,15 +37,15 @@ void TaskBuddy::on_LoginButton_clicked()
     }else{
 
         ui->taskHub->show();
-        if(currUser->list.size() >0){
+        if(currUser->getTaskList().size() >0){
             qDebug() << "List is not empty";
         }
 
             QString cat;
             QString name;
-            for(unsigned int i = 0; i < currUser->list.size(); i++){
-                cat = QString::fromStdString(currUser->list.at(i).getListCategory());
-                name = QString::fromStdString(currUser->list.at(i).getListName());
+            for(unsigned int i = 0; i < currUser->getTaskList().size(); i++){
+                cat = QString::fromStdString(currUser->getTaskList().at(i).getListCategory());
+                name = QString::fromStdString(currUser->getTaskList().at(i).getListName());
                 ui->TaskListsDisplay->addItem(cat + ": " + name);
             }
 
@@ -99,14 +99,14 @@ void TaskBuddy::on_addTLBtn_clicked()
 
     ui->TaskListsDisplay->addItem(cat + ": " + name);
 
-    if(currUser->list.size() > 0){
+    if(currUser->getTaskList().size() > 0){
         qDebug() << "List is saved";
     }
 }
 
 void TaskBuddy::on_deleteTLMenuBtn_clicked()
 {
-    if(currUser->list.size() == 0){
+    if(currUser->getTaskList().size() == 0){
         QMessageBox::warning(this, "Warning", "UserAccount has no Task Lists");
     }else if(this->ui->TaskListsDisplay->selectedItems().size() == 0){
             QMessageBox::warning(this, "Warning", "Please select a Task List");
@@ -138,7 +138,7 @@ void TaskBuddy::on_showTaskMenuBtn_clicked()
         for(QListWidgetItem *item: ui->TaskListsDisplay->selectedItems()){
             row = ui->TaskListsDisplay->row(item);
         }
-        TaskList *tl = &currUser->list.at(row);
+        TaskList *tl = &currUser->getTaskList().at(row);
         if(tl->tList.size() > 0){
             ui->TasksDisplay->clear();
             for(unsigned int i = 0; i < tl->tList.size(); i++){
@@ -159,7 +159,7 @@ void TaskBuddy::on_showTaskMenuBtn_clicked()
 void TaskBuddy::on_addTaskMenuBtn_clicked()
 {
 
-    if(currUser->list.size() == 0){
+    if(currUser->getTaskList().size() == 0){
         QMessageBox::warning(this, "Warning", "Please add a Task List");
     }else if(this->ui->TaskListsDisplay->selectedItems().size() == 0){
         QMessageBox::warning(this, "Warning", "Please select a Task List");
@@ -170,7 +170,7 @@ void TaskBuddy::on_addTaskMenuBtn_clicked()
         for(QListWidgetItem *item: ui->TaskListsDisplay->selectedItems()){
             row = ui->TaskListsDisplay->row(item);
         }
-        TaskList *tl = &currUser->list.at(row);
+        TaskList *tl = &currUser->getTaskList().at(row);
         if(tl->tList.size() > 0){
             ui->TasksDisplay->clear();
             qDebug() << "TaskList is not empty";
@@ -196,7 +196,7 @@ void TaskBuddy::on_addTBtn_clicked()
     }
 
     if(row >= 0){
-        TaskList *tl = &currUser->list.at(row);
+        TaskList *tl = &currUser->getTaskList().at(row);
 
         newTask.setTaskName(name.toStdString());
         newTask.setTaskNote(note.toStdString());
@@ -237,7 +237,7 @@ void TaskBuddy::on_deleteTaskMenuBtn_clicked()
             QMessageBox::warning(this, "Warning", "Please select a Task");
     }else{
 
-         TaskList *tl = &currUser->list.at(row);
+         TaskList *tl = &currUser->getTaskList().at(row);
 
 
 
@@ -261,7 +261,7 @@ void TaskBuddy::on_showSubTasks_clicked()
         for(QListWidgetItem *item: ui->TasksDisplay->selectedItems()){
             row = ui->TasksDisplay->row(item);
         }
-        TaskList *tl = &currUser->list.at(row);
+        TaskList *tl = &currUser->getTaskList().at(row);
         Task *t = &tl->tList.at(row);
         if(t->subTaskList.size() > 0){
             ui->SubTaskDisplay->clear();
@@ -298,7 +298,7 @@ void TaskBuddy::on_addSTMenuBtn_clicked()
     }else if(this->ui->TasksDisplay->selectedItems().size() == 0){
         QMessageBox::warning(this, "Warning", "Please select a Task");
     }else {
-        TaskList *tl = &currUser->list.at(rowTL);
+        TaskList *tl = &currUser->getTaskList().at(rowTL);
         Task *t = &tl->tList.at(row);
         ui->AddSubTask->show();
 
@@ -330,7 +330,7 @@ void TaskBuddy::on_addSubTaskBtn_clicked()
     }
 
     if(row >= 0){
-        TaskList *tl = &currUser->list.at(rowTL);
+        TaskList *tl = &currUser->getTaskList().at(rowTL);
         Task *t = &tl->tList.at(row);
 
         newSubTask.setSubTaskName(name.toStdString());
@@ -373,7 +373,7 @@ void TaskBuddy::on_deleteSTMenuBtn_clicked()
             QMessageBox::warning(this, "Warning", "Please select a Task");
     }else{
 
-        TaskList *tl = &currUser->list.at(row);
+        TaskList *tl = &currUser->getTaskList().at(row);
         Task *t = &tl->tList.at(rowT);
 
         t->deleteSubTask(rowST);

@@ -23,13 +23,13 @@ class TaskList{
 
     void addTask(Task t);
     void deleteTask(int);
-
     vector<Task> tList;
 	protected:
 
 	private:
 	std::string listName;
 	std::string category;
+
 };
 
 #endif

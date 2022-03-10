@@ -28,7 +28,11 @@ void UserAccount::addTaskList(TaskList t){
     list.push_back(t);
 }
 
-void UserAccount::deleteTaskList(int index){
+vector<TaskList> UserAccount::getTaskList(){
+    return list;
+}
+
+void UserAccount::deleteTaskList(unsigned int index){
     qDebug() << "Delete func called";
     for(unsigned int i = 0; i < this->list.size(); ++i){
         if (i == index){

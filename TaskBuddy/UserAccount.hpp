@@ -16,13 +16,14 @@ public:
         UserAccount(std::string nam);
         void setUserName(std::string n);
         std::string getUserName();
+        vector<TaskList> getTaskList();
         void addTaskList(TaskList t);
-        void deleteTaskList(int);
-        vector<TaskList> list;
+        void deleteTaskList(unsigned int);
+
         protected:
 
         private:
-
+        vector<TaskList> list;
         std::string userName;
 
 

@@ -139,12 +139,12 @@ void TaskBuddy::on_showTaskMenuBtn_clicked()
             row = ui->TaskListsDisplay->row(item);
         }
         TaskList *tl = &currUser->list.at(row);
-        if(tl->tList.size() > 0){
+        if(tl->getTasks().size() > 0){
             ui->TasksDisplay->clear();
-            for(unsigned int i = 0; i < tl->tList.size(); i++){
-                QString nt = QString::fromStdString(tl->tList.at(i).getTaskNote());
-                QString nm  = QString::fromStdString(tl->tList.at(i).getTaskName());
-                QString dt  = QString::fromStdString(tl->tList.at(i).getTaskDate());
+            for(unsigned int i = 0; i < tl->getTasks().size(); i++){
+                QString nt = QString::fromStdString(tl->getTasks().at(i).getTaskNote());
+                QString nm  = QString::fromStdString(tl->getTasks().at(i).getTaskName());
+                QString dt  = QString::fromStdString(tl->getTasks().at(i).getTaskDate());
                 ui->TasksDisplay->addItem(dt + ": " + nm + " - " + nt);
             }
             qDebug() << "TaskList is not empty";

@@ -18,6 +18,7 @@ private:
     string taskName;
     string taskNote;
     string taskDate;
+    vector<SubTask> subTaskList;
 
 public:
 
@@ -31,9 +32,11 @@ public:
     string getTaskNote() const;
     string getTaskDate() const;
 
-    void addSubTask(SubTask);
-    void deleteSubTask(int);
+    vector<SubTask> getSubTaskList();
 
-    vector<SubTask> subTaskList;
+    void addSubTask(SubTask);
+    void deleteSubTask(unsigned int);
+
+
 };
 #endif //__TASK_HPP__

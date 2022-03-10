@@ -53,12 +53,16 @@ string Task::getTaskDate() const
     return this->taskDate;
 }
 
+vector<SubTask> Task::getSubTaskList(){
+    return this->subTaskList;
+}
+
 void Task::addSubTask(SubTask s)
 {
     subTaskList.push_back(s);
 }
 
-void Task::deleteSubTask(int index)
+void Task::deleteSubTask(unsigned int index)
 {
     qDebug() << "Delete SubTask func called";
     for(unsigned int i = 0; i < this->subTaskList.size(); ++i){

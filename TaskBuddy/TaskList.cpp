@@ -39,7 +39,7 @@ vector<Task> TaskList::getTasks(){
 	return this->tList;
 }
 
-void TaskList::deleteTask(int index){
+void TaskList::deleteTask(unsigned int index){
     qDebug() << "Delete Task func called";
     for(unsigned int i = 0; i < this->tList.size(); ++i){
         if (i == index){

@@ -29,7 +29,7 @@ void UserAccount::addTaskList(TaskList t){
 }
 
 vector<TaskList> UserAccount::getTaskList(){
-    return list;
+    return this->list;
 }
 
 void UserAccount::deleteTaskList(unsigned int index){

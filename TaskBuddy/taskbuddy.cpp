@@ -3,6 +3,7 @@
 
 #include <QMessageBox>
 #include <QDebug>
+#include <vector>
 
 TaskBuddy::TaskBuddy(QWidget *parent)
     : QMainWindow(parent)
@@ -111,7 +112,7 @@ void TaskBuddy::on_deleteTLMenuBtn_clicked()
     }else if(this->ui->TaskListsDisplay->selectedItems().size() == 0){
             QMessageBox::warning(this, "Warning", "Please select a Task List");
     }else{
-        int row;
+        int row = -1;
 
         for(QListWidgetItem *item: ui->TaskListsDisplay->selectedItems()){
             row = ui->TaskListsDisplay->row(item);
@@ -138,13 +139,11 @@ void TaskBuddy::on_showTaskMenuBtn_clicked()
         for(QListWidgetItem *item: ui->TaskListsDisplay->selectedItems()){
             row = ui->TaskListsDisplay->row(item);
         }
-<<<<<<< HEAD
-        TaskList *tl = &currUser->getTaskList().at(row);
-        if(tl->tList.size() > 0){
-=======
-        TaskList *tl = &currUser->list.at(row);
+
+        vector<TaskList> currTaskList = currUser->getTaskList();
+        TaskList *tl = &currTaskList.at(row);
+
         if(tl->getTasks().size() > 0){
->>>>>>> d01688b02a9d640d312232481646c9489e105744
             ui->TasksDisplay->clear();
             for(unsigned int i = 0; i < tl->getTasks().size(); i++){
                 QString nt = QString::fromStdString(tl->getTasks().at(i).getTaskNote());
@@ -175,8 +174,11 @@ void TaskBuddy::on_addTaskMenuBtn_clicked()
         for(QListWidgetItem *item: ui->TaskListsDisplay->selectedItems()){
             row = ui->TaskListsDisplay->row(item);
         }
-        TaskList *tl = &currUser->getTaskList().at(row);
-        if(tl->tList.size() > 0){
+
+        vector<TaskList> currTaskList = currUser->getTaskList();
+        TaskList *tl = &currTaskList.at(row);
+
+        if(tl->getTasks().size() > 0){
             ui->TasksDisplay->clear();
             qDebug() << "TaskList is not empty";
         }else{
@@ -201,7 +203,8 @@ void TaskBuddy::on_addTBtn_clicked()
     }
 
     if(row >= 0){
-        TaskList *tl = &currUser->getTaskList().at(row);
+        vector<TaskList> currTaskList = currUser->getTaskList();
+        TaskList *tl = &currTaskList.at(row);
 
         newTask.setTaskName(name.toStdString());
         newTask.setTaskNote(note.toStdString());
@@ -209,11 +212,11 @@ void TaskBuddy::on_addTBtn_clicked()
 
         tl->addTask(newTask);
 
-        if(tl->tList.size() > 0){
-            for(unsigned int i = 0; i < tl->tList.size(); i++){
-                QString nt = QString::fromStdString(tl->tList.at(i).getTaskNote());
-                QString nm  = QString::fromStdString(tl->tList.at(i).getTaskName());
-                QString dt  = QString::fromStdString(tl->tList.at(i).getTaskDate());
+        if(tl->getTasks().size() > 0){
+            for(unsigned int i = 0; i < tl->getTasks().size(); i++){
+                QString nt = QString::fromStdString(tl->getTasks().at(i).getTaskNote());
+                QString nm  = QString::fromStdString(tl->getTasks().at(i).getTaskName());
+                QString dt  = QString::fromStdString(tl->getTasks().at(i).getTaskDate());
                 ui->TasksDisplay->addItem(dt + ": " + nm + " - " + nt);
             }
             qDebug() << "TaskList is not empty";
@@ -242,9 +245,8 @@ void TaskBuddy::on_deleteTaskMenuBtn_clicked()
             QMessageBox::warning(this, "Warning", "Please select a Task");
     }else{
 
-         TaskList *tl = &currUser->getTaskList().at(row);
-
-
+        vector<TaskList> currTaskList = currUser->getTaskList();
+        TaskList *tl = &currTaskList.at(row);
 
         tl->deleteTask(rowTL);
 
@@ -266,12 +268,18 @@ void TaskBuddy::on_showSubTasks_clicked()
         for(QListWidgetItem *item: ui->TasksDisplay->selectedItems()){
             row = ui->TasksDisplay->row(item);
         }
-        TaskList *tl = &currUser->getTaskList().at(row);
-        Task *t = &tl->tList.at(row);
-        if(t->subTaskList.size() > 0){
+
+        vector<TaskList> currTaskList = currUser->getTaskList();
+        TaskList *tl = &currTaskList.at(row);
+
+        vector<Task> currTask = tl->getTasks();
+        Task *t = &currTask.at(row);
+
+        vector<SubTask> currSubTask = t->getSubTaskList();
+        if(currSubTask.size() > 0){
             ui->SubTaskDisplay->clear();
-            for(unsigned int i = 0; i < tl->tList.size(); i++){
-                QString name = QString::fromStdString(t->subTaskList.at(i).getSubTaskName());
+            for(unsigned int i = 0; i < tl->getTasks().size(); i++){
+                QString name = QString::fromStdString(currSubTask.at(i).getSubTaskName());
                 ui->SubTaskDisplay->addItem(name);
             }
             qDebug() << "Task is not empty";
@@ -280,6 +288,8 @@ void TaskBuddy::on_showSubTasks_clicked()
             QMessageBox::warning(this, "Warning", "Please add a SubTask");
             qDebug() << "Task is empty";
         }
+        delete[] tl;
+        delete[] t;
     }
 }
 
@@ -303,11 +313,15 @@ void TaskBuddy::on_addSTMenuBtn_clicked()
     }else if(this->ui->TasksDisplay->selectedItems().size() == 0){
         QMessageBox::warning(this, "Warning", "Please select a Task");
     }else {
-        TaskList *tl = &currUser->getTaskList().at(rowTL);
-        Task *t = &tl->tList.at(row);
+        vector<TaskList> currTaskList = currUser->getTaskList();
+        TaskList *tl = &currTaskList.at(rowTL);
+
+        vector<Task> currTask = tl->getTasks();
+        Task *t = &currTask.at(row);
         ui->AddSubTask->show();
 
-        if(t->subTaskList.size() > 0){
+        vector<SubTask> currSubTask = t->getSubTaskList();
+        if(currSubTask.size() > 0){
             ui->SubTaskDisplay->clear();
             qDebug() << "Task is not empty";
         }else{
@@ -335,22 +349,26 @@ void TaskBuddy::on_addSubTaskBtn_clicked()
     }
 
     if(row >= 0){
-        TaskList *tl = &currUser->getTaskList().at(rowTL);
-        Task *t = &tl->tList.at(row);
+        vector<TaskList> currTaskList = currUser->getTaskList();
+        TaskList *tl = &currTaskList.at(rowTL);
 
+        vector<Task> currTask = tl->getTasks();
+        Task *t = &currTask.at(row);
         newSubTask.setSubTaskName(name.toStdString());
 
         t->addSubTask(newSubTask);
 
-        if(t->subTaskList.size() > 0){
-            for(unsigned int i = 0; i < t->subTaskList.size(); i++){
-                QString nm  = QString::fromStdString(t->subTaskList.at(i).getSubTaskName());
+        vector<SubTask> currSubTask = t->getSubTaskList();
+        if(currSubTask.size() > 0){
+            for(unsigned int i = 0; i < currSubTask.size(); i++){
+                QString nm  = QString::fromStdString(currSubTask.at(i).getSubTaskName());
                 ui->SubTaskDisplay->addItem(nm);
             }
             qDebug() << "Task is not empty";
         }else{
             qDebug() << "Task is empty";
         }
+        delete [] t;
     }
 }
 
@@ -378,8 +396,11 @@ void TaskBuddy::on_deleteSTMenuBtn_clicked()
             QMessageBox::warning(this, "Warning", "Please select a Task");
     }else{
 
-        TaskList *tl = &currUser->getTaskList().at(row);
-        Task *t = &tl->tList.at(rowT);
+        vector<TaskList> currTaskList = currUser->getTaskList();
+        TaskList *tl = &currTaskList.at(row);
+
+        vector<Task> currTask = tl->getTasks();
+        Task *t = &currTask.at(rowT);
 
         t->deleteSubTask(rowST);
 

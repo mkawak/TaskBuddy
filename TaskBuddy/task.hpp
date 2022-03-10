@@ -34,6 +34,7 @@ public:
 
     vector<SubTask> getSubTaskList();
 
+    void setSubTask(vector<SubTask> s);
     void addSubTask(SubTask);
     void deleteSubTask(string);
 

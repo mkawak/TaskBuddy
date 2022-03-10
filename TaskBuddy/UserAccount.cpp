@@ -31,6 +31,10 @@ vector<TaskList> UserAccount::getTaskList(){
     return this->list;
 }
 
+void UserAccount::setTaskList(vector<TaskList> t){
+    list = t;
+}
+
 void UserAccount::deleteTaskList(string str){
     for(unsigned int i = 0; i < this->list.size(); ++i){
         if (this->list.at(i).getListName() == str){

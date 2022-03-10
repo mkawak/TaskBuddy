@@ -41,6 +41,10 @@ void TaskList::addTask(Task t)
     tList.push_back(t);
 }
 
+void TaskList::setTask(vector<Task> t){
+    tList = t;
+}
+
 vector<Task> TaskList::getTasks()
 {
     return this->tList;

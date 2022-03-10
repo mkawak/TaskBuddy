@@ -27,6 +27,7 @@ public:
 	string getListName();
 	string getListCategory();
 	void addTask(Task t);
+    void setTask(vector<Task>);
 	void deleteTask(string);
 	vector<Task> getTasks();
 };

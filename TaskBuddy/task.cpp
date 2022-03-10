@@ -69,6 +69,10 @@ void Task::addSubTask(SubTask s)
     subTaskList.push_back(s);
 }
 
+void Task::setSubTask(vector<SubTask> s){
+    subTaskList = s;
+}
+
 void Task::deleteSubTask(string str)
 {
     for (unsigned int i = 0; i < this->subTaskList.size(); ++i)

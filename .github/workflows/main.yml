@@ -33,6 +33,6 @@ jobs:
       - name: Run a multi-line script
         run: |
           git submodule update --init --recursive
-	  cmake .
+          cmake .
           make
           ./test

@@ -354,7 +354,7 @@ void TaskBuddy::on_addSubTaskBtn_clicked()
 
         vector<Task> currTask = tl->getTasks();
         Task *t = &currTask.at(row);
-        newSubTask.setSubTaskName(name.toStdString());
+        newSubTask.setTaskName(name.toStdString());
 
         t->addSubTask(newSubTask);
 

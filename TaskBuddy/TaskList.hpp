@@ -10,13 +10,14 @@
 
 using namespace std;
 
-class TaskList{
+class TaskList
+{
 
 private:
 	std::string listName;
 	std::string category;
 	vector<Task> tList;
-	
+
 public:
 	TaskList();
 	TaskList(std::string nam, std::string cat);
@@ -26,9 +27,8 @@ public:
 	string getListName();
 	string getListCategory();
 	void addTask(Task t);
-    void deleteTask(unsigned int);
+	void deleteTask(string);
 	vector<Task> getTasks();
-	
 };
 
 #endif

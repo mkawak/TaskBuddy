@@ -19,7 +19,7 @@ SubTask::~SubTask()
     //delete name;
 }
 
-SubTask& SubTask::setSubTaskName(string s)
+SubTask &SubTask::setSubTaskName(string s)
 {
     this->name = s;
     return *this;
@@ -29,5 +29,3 @@ string SubTask::getSubTaskName() const
 {
     return this->name;
 }
-
-

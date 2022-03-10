@@ -2,7 +2,6 @@
 #include <iostream>
 #include <vector>
 #include <cmath>
-#include <QDebug>
 
 #include "UserAccount.hpp"
 
@@ -32,12 +31,10 @@ vector<TaskList> UserAccount::getTaskList(){
     return this->list;
 }
 
-void UserAccount::deleteTaskList(unsigned int index){
-    qDebug() << "Delete func called";
+void UserAccount::deleteTaskList(string str){
     for(unsigned int i = 0; i < this->list.size(); ++i){
-        if (i == index){
+        if (this->list.at(i).getListName() == str){
             list.erase(list.begin()+(i));
-            qDebug() << "List deleted";
         }
     }
 }

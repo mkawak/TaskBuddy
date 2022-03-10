@@ -3,48 +3,56 @@
 #include <iostream>
 #include <vector>
 #include <cmath>
-#include <QDebug>
 
 using namespace std;
-TaskList::TaskList(){
-	this->listName = "none";
-	this->category = "none";
+TaskList::TaskList()
+{
+    this->listName = "none";
+    this->category = "none";
 }
-TaskList::TaskList(std::string nam, std::string cat){
-	this->listName = nam;
+TaskList::TaskList(std::string nam, std::string cat)
+{
+    this->listName = nam;
     this->category = cat;
 }
 
-void TaskList::setListName(std::string n){
+void TaskList::setListName(std::string n)
+{
     this->listName = n;
 }
 
-void TaskList::setListCategory(std::string c){
+void TaskList::setListCategory(std::string c)
+{
     this->category = c;
 }
 
-string TaskList::getListName(){
+string TaskList::getListName()
+{
     return this->listName;
 }
 
-string TaskList::getListCategory(){
+string TaskList::getListCategory()
+{
     return this->category;
 }
 
-void TaskList::addTask(Task t){
+void TaskList::addTask(Task t)
+{
     tList.push_back(t);
 }
 
-vector<Task> TaskList::getTasks(){
-	return this->tList;
+vector<Task> TaskList::getTasks()
+{
+    return this->tList;
 }
 
-void TaskList::deleteTask(unsigned int index){
-    qDebug() << "Delete Task func called";
-    for(unsigned int i = 0; i < this->tList.size(); ++i){
-        if (i == index){
-            tList.erase(tList.begin()+(i));
-            qDebug() << "Task deleted";
+void TaskList::deleteTask(string str)
+{
+    for (unsigned int i = 0; i < this->tList.size(); ++i)
+    {
+        if (this->tList.at(i).getTaskName() == str)
+        {
+            tList.erase(tList.begin() + (i));
         }
     }
 }

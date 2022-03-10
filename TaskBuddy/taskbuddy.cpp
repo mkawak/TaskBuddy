@@ -118,8 +118,8 @@ void TaskBuddy::on_deleteTLMenuBtn_clicked()
             row = ui->TaskListsDisplay->row(item);
         }
 
-
-        currUser->deleteTaskList(row);
+        string str = currUser->getTaskList().at(row).getListName();
+        currUser->deleteTaskList(str);
 
 
         ui->TaskListsDisplay->takeItem(row);
@@ -248,7 +248,8 @@ void TaskBuddy::on_deleteTaskMenuBtn_clicked()
         vector<TaskList> currTaskList = currUser->getTaskList();
         TaskList *tl = &currTaskList.at(row);
 
-        tl->deleteTask(rowTL);
+        string str = tl->getTasks().at(rowTL).getTaskName();
+        tl->deleteTask(str);
 
 
         ui->TasksDisplay->takeItem(row);
@@ -288,8 +289,6 @@ void TaskBuddy::on_showSubTasks_clicked()
             QMessageBox::warning(this, "Warning", "Please add a SubTask");
             qDebug() << "Task is empty";
         }
-        delete[] tl;
-        delete[] t;
     }
 }
 
@@ -402,7 +401,8 @@ void TaskBuddy::on_deleteSTMenuBtn_clicked()
         vector<Task> currTask = tl->getTasks();
         Task *t = &currTask.at(rowT);
 
-        t->deleteSubTask(rowST);
+        string str = t->getSubTaskList().at(rowST).getSubTaskName();
+        t->deleteSubTask(str);
 
         ui->SubTaskDisplay->takeItem(rowST);
     }

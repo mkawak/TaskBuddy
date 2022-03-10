@@ -10,8 +10,6 @@ using namespace std;
 
 class Task
 {
-    //friend ostream& operator << (ostream&, const Task&);
-    //friend istream& operator >> (istream&, Task&);
 
 private:
 
@@ -23,7 +21,9 @@ private:
 public:
 
     Task();
+    Task(string, string, string);
     ~Task();
+
     Task& setTaskName(string);
     Task& setTaskNote(string);
     Task& setTaskDate(string);
@@ -35,7 +35,7 @@ public:
     vector<SubTask> getSubTaskList();
 
     void addSubTask(SubTask);
-    void deleteSubTask(unsigned int);
+    void deleteSubTask(string);
 
 
 };

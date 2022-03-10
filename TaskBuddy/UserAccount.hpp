@@ -18,7 +18,7 @@ public:
         std::string getUserName();
         vector<TaskList> getTaskList();
         void addTaskList(TaskList t);
-        void deleteTaskList(unsigned int);
+        void deleteTaskList(string);
 
         protected:
 

@@ -53,6 +53,9 @@ int main()
     task1.addSubTask(subTask1);
     task2.addSubTask(subTask2);
     task3.addSubTask(subTask3);
-
+	
+    newUser.deleteTaskList(taskList1.getListName());
+    taskList2.deleteTask(task2.getTaskName());
+    task3.deleteSubTask(subTask3.getSubTaskName());
     return 0;
 }

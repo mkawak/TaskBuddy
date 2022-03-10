@@ -11,25 +11,23 @@
 using namespace std;
 
 class TaskList{
-	public:
-    TaskList();
-    TaskList(std::string nam, std::string cat);
-
-	void setListName(std::string n);
-    void setListCategory(std::string c);
-
-    string getListName();
-    string getListCategory();
-
-    void addTask(Task t);
-    void deleteTask(int);
-
-    vector<Task> tList;
-	protected:
-
-	private:
+private:
 	std::string listName;
 	std::string category;
+	vector<Task> tList;
+	
+public:
+	TaskList();
+	TaskList(std::string nam, std::string cat);
+
+	void setListName(std::string n);
+	void setListCategory(std::string c);
+	string getListName();
+	string getListCategory();
+	void addTask(Task t);
+	void deleteTask(int);
+	vector<Task> getTasks();
+	
 };
 
 #endif

@@ -138,13 +138,18 @@ void TaskBuddy::on_showTaskMenuBtn_clicked()
         for(QListWidgetItem *item: ui->TaskListsDisplay->selectedItems()){
             row = ui->TaskListsDisplay->row(item);
         }
+<<<<<<< HEAD
         TaskList *tl = &currUser->getTaskList().at(row);
         if(tl->tList.size() > 0){
+=======
+        TaskList *tl = &currUser->list.at(row);
+        if(tl->getTasks().size() > 0){
+>>>>>>> d01688b02a9d640d312232481646c9489e105744
             ui->TasksDisplay->clear();
-            for(unsigned int i = 0; i < tl->tList.size(); i++){
-                QString nt = QString::fromStdString(tl->tList.at(i).getTaskNote());
-                QString nm  = QString::fromStdString(tl->tList.at(i).getTaskName());
-                QString dt  = QString::fromStdString(tl->tList.at(i).getTaskDate());
+            for(unsigned int i = 0; i < tl->getTasks().size(); i++){
+                QString nt = QString::fromStdString(tl->getTasks().at(i).getTaskNote());
+                QString nm  = QString::fromStdString(tl->getTasks().at(i).getTaskName());
+                QString dt  = QString::fromStdString(tl->getTasks().at(i).getTaskDate());
                 ui->TasksDisplay->addItem(dt + ": " + nm + " - " + nt);
             }
             qDebug() << "TaskList is not empty";

@@ -35,6 +35,10 @@ void TaskList::addTask(Task t){
     tList.push_back(t);
 }
 
+vector<Task> TaskList::getTasks(){
+	return this->tList;
+}
+
 void TaskList::deleteTask(int index){
     qDebug() << "Delete Task func called";
     for(unsigned int i = 0; i < this->tList.size(); ++i){

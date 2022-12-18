@@ -1,6 +1,6 @@
 # Task Buddy
  
- > Authors: [Allison Chu](https://github.com/allisonchuu) [Juan Salas](https://github.com/lightsofpeace) [Majd Kawak](https://github.com/mkawa025) [Christopher Wong](https://github.com/c24wong)
+ > Authors: [Allison Chu](https://github.com/allisonchuu) [Juan Salas](https://github.com/lightsofpeace) [Majd Kawak](https://github.com/mkawak) [Christopher Wong](https://github.com/c24wong)
 
 ## Project Description
 
